@@ -2,11 +2,16 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from os.path import abspath, dirname, join
+from site import addsitedir
+
+from django.conf import settings
 
 
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'unseen.settings')
+    sys.path.insert(0, join(settings.PROJECT_ROOT, "unseen"))
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
