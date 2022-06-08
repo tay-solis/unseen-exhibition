@@ -20,5 +20,7 @@ from unseen import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home_view, name='home')
+    path('', views.home_view, name='home'),
+    path('about/artist/', views.about_artist_view, name='about_artist'),
+    path('about/show/', views.about_show_view, name='about_artist'),
 ]

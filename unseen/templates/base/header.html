@@ -1,0 +1,28 @@
+<header class="header {% if context == 'conversation'%}header--conversation{% endif %}">
+    <h1><em>unseen</em> | {{header_text}}</h1>
+    {% if show_nav %}
+    <nav class="nav">
+        <h2 class="nav__links {% if context == 'conversation'%}nav__links--conversation{% endif %}">
+            {% if link_context != 'show' %}
+            <a href="/about/show/">
+                About the Show
+            </a>
+            {% else %}
+                About the Show
+            {% endif %}
+             | 
+            {% if link_context != 'artist' %}
+            <a href="/about/artist/">
+                About the Artist
+            </a>
+            {% else %}
+                About the Artist
+            {% endif %}
+        </h2>
+        <h2 class="nav__links {% if context == 'conversation'%}nav__links--conversation{% endif %}">
+            <a href="/gallery/">
+                Back to Gallery
+            </a>
+        </h2>
+    {% endif %}
+</header>

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}About the Show | unseen{% endblock %}
+
+{% block header %}
+{% include 'base/header.html' with header_text='About' link_context='show' show_nav=True show_gallery_link=True %}
+{% endblock %}
+
+{% block main %}
+<main class="about about__show">
+    <section class="about__show-info-container">
+        <img class="about__show-image" src="{% static 'images/unseen-photo-1.jpg' %}"
+            alt="Photograph of a performance of Unseen. The actor stands on the stage looking at her phone surrounded by furniture in disarray, evocative of disaster." />
+        <div class="about__show-info">
+            <h1 class="about__show-title">unseen</h1>
+            <p class="about__show-info-text">
+                By Mona Mansour
+            </p>
+            <p class="about__show-info-text">
+                Directed by Evren <strong>Odcikin</strong>
+            </p>
+            <p class="about__show-info-text">
+                West Coast Premiere
+            </p>
+            <p class="about__show-dates">
+                April 12 — July 31
+            </p>
+            <div class="about__show-buttons">
+                <a href="https://www.osfashland.org/en/productions/2022-plays/unseen.aspx">
+                    Learn More
+                </a>
+                <a href="https://tickets.osfashland.org/overview/40882">
+                    Buy Tickets
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <p class="about__text">
+        Mia, an American conflict photographer, wakes up at the site of a massacre in Syria, not sure how she got there.
+        With her Turkish girlfriend Derya and her Californian mother Jane, Mia must slowly piece together the details of
+        her past to find out what happened. Mona Mansour’s beautifully human and surprisingly humorous play asks what it
+        would mean for our souls—personally and as a nation—if we were to truly see the impact of our actions.
+    </p>
+    <section class="about__section">
+        <p class="about__text">
+            Playwright
+            <a href="https://www.monamansour.com/">Mona Mansour</a>
+            is thrilled to be making her OSF debut with <em>unseen</em>, partnering again with 
+            <a href="https://www.osfashland.org/en/artist-biographies/artistic-staff/Evren-Odcikin.aspx">Evren Odcikin</a>, 
+            who directed We Swim We Talk We Go To War at Golden Thread in 2018. Her play The Vagrant Trilogy
+            made its NYC debut in April 2022 at the Public Theater, directed by Mark Wing-Davey; it was postponed for
+            two years due to Covid-19. The trilogy was presented at Mosaic Theater in 2018 (dir. Wing-Davey.) Of the
+            trilogy: The Hour of Feeling (dir. Wing-Davey) premiered at the Humana Fest, and an Arabic translation was
+            presented at NYU Abu Dhabi.
+        </p>
+        <img class="about__show-image" src="{% static 'images/Mansour-Mona_2.jpg' %}"
+            alt="Portrait of playwright Mona Mansour." />
+    </section>
+
+</main>
+{% endblock %}
+
+{% block footer %}
+{% include 'base/footer.html' %}
+{% endblock %}
