@@ -15,3 +15,6 @@ def about_show_view(request):
 
 def conversation_home_view(request):
     return TemplateResponse(request, 'conversation/conversation_home.html', {'photos': Photo.objects.all()})
+
+def conversation_photo_view(request):
+    return TemplateResponse(request, 'conversation/conversation_photo_page.html', {'photos': Photo.objects.all()})

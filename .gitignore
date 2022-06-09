@@ -3,3 +3,5 @@ media/
 .DS_Store
 
 unseen/.DS_Store
+
+node_modules

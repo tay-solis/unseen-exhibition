@@ -1,0 +1,22 @@
+{
+  "name": "unseen-exhibition",
+  "version": "0.1.0",
+  "description": "Photo exhibition created for the Oregon Shakespeare Festival",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w unseen/static/sass/app.scss unseen/static/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tay-solis/unseen-exhibition.git"
+  },
+  "author": "Althea Solis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tay-solis/unseen-exhibition/issues"
+  },
+  "homepage": "https://github.com/tay-solis/unseen-exhibition#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

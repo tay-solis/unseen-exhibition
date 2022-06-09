@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block header %}
+    {% include 'base/header.html' with header_text='About' link_context='conversation' show_nav=True show_gallery_link=False %}
+{% endblock %}
+
+{% block main %}
+<main class="photo-convo">
+    <section class="photo-convo__photo-container">
+        <img src="{{photo.photo.url}}" class="photo-convo__image">
+    </section>
+    <section class="photo-convo__photo-container">
+        <button class="nav-button nav-button--previous nav-button--conversation">
+            Previous
+        </button>
+        <button class="photo-convo__button">Return to Gallery</button>
+        <button class="photo-convo__button">Respond</button>
+
+        <button class="nav-button nav-button--next nav-button--conversation">
+            Next
+        </button>
+    </section>
+    <section class="photo-convo__form">
+        {% include 'conversation/conversation_form.html' %}
+    </section>
+
+    <section class="photo-convo__responses">
+        {% include 'conversation/conversation_responses.html' %}
+    </section>
+    
+</main>
+{% endblock %}
+
+{% block footer %}
+    {% include 'base/footer.html' with footer_context='conversation' %}
+{% endblock %}

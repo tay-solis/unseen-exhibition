@@ -1,4 +1,7 @@
 from django.db import models
+from django.urls import reverse
+
+from autoslug import AutoSlugField
 
 # Create your models here.
 class Photo(models.Model):
@@ -7,12 +10,16 @@ class Photo(models.Model):
     description = models.CharField(max_length=256, blank=True)
     url = models.URLField(max_length=256, blank=True)
     photo = models.ImageField(blank=False)
+    slug = AutoSlugField(populate_from='name')
 
     def response_num(self):
         return self.comments.all().count()
 
     def featured_response(self):
         return self.comments.filter(featured=True).first()
+
+    def get_absolute_url(self):
+        return reverse("conversation", args=[self.slug])
 
     def __str__(self):
         return self.name
