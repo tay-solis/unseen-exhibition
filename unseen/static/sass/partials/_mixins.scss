@@ -1,0 +1,15 @@
+@mixin cr-regular {
+  font-family: "cormorant-garamond-regular", serif;
+}
+
+@mixin cr-light {
+  font-family: "cormorant-garamond-light", serif;
+}
+
+@mixin cr-light-italic {
+  font-family: "cormorant-garamond-light-italic", serif;
+}
+
+@mixin transition {
+  transition: all 200ms ease-in;
+}

@@ -1,8 +1,11 @@
 {% load static %}
 <footer class="footer {% if footer_context == 'conversation'%}footer--conversation{% endif %}">
     <div class="footer__content">
-        <img class="footer__logo" src="{% static 'images/logos/OSF_logo_Reg_redblack.png' %}"
+        <a class="link--unstyled" href="https://www.osfashland.org/">
+            <img class="footer__logo" src="{% static 'images/logos/OSF_logo_Reg_redblack.png' %}"
             alt="Oregon Shakespeare Festival" />
+        </a>
+
         <div class="footer__text-content">
             <p class="footer__text">
                 Images copyright of Nichole Sobecki

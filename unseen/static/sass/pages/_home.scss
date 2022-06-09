@@ -1,0 +1,45 @@
+.home {
+  background-color: $black;
+  color: $white;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 600px auto;
+
+  &__photo {
+    filter: saturate(0%);
+    max-height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__info {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: $space-md $space-lg;
+  }
+
+  &__presented-by {
+    max-width: 60%;
+  }
+
+  &__logo {
+    width: 200px;
+    padding: $space-xs 0;
+  }
+
+  &__enter-link {
+    text-align: right;
+  }
+
+  a {
+    @include transition;
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      color: $osf-red;
+    }
+  }
+}

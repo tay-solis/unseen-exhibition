@@ -1,0 +1,21 @@
+.header {
+  padding: $space-lg;
+  width: 100%;
+  text-align: center;
+
+  &__title {
+    margin-bottom: $space-md;
+  }
+
+  &__title-name {
+    @include cr-light-italic;
+    font-style: italic;
+  }
+}
+
+.nav {
+  &__links {
+    margin-bottom: $space-sm;
+    font-size: $font-md;
+  }
+}

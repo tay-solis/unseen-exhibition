@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: $space-lg;
+  width: 100%;
+
+  &__content {
+    display: flex;
+    border-top: 1px solid $black;
+    padding: $space-ms;
+  }
+
+  &__text-content {
+    margin-left: $space-ms;
+  }
+
+  &__logo {
+    width: 111px;
+  }
+
+  &__text {
+    font-size: $font-xs;
+    margin: $space-sm 0;
+  }
+}

@@ -2,4 +2,14 @@ $image-path: '../images/';
 
 @import 'reset';
 
+// Partials
+@import 'partials/mixins';
+@import 'partials/variables';
 @import 'partials/base';
+
+// Components
+@import 'components/footer';
+@import 'components/header';
+
+// Pages
+@import 'pages/home';

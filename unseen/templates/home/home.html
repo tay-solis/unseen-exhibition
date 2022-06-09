@@ -5,23 +5,30 @@
 
 {% block main %}
 <main class="home">
-    <section class="home__photo">
-        
-    </section>
+    <section class="home__photo" style="background-image: url('{% static 'images/Nichole_Sobecki.jpg' %}')"></section>
     <section class="home__info home__info--desktop">
-        <h1 class="home__title">unseen | Digital Photo Exhibition</h1>
-        <h2 class="home__subtitle">
-            works by <a href="/about/artist">Nichole Sobecki</a>
-        </h2>
-    
+        <div class="home__title-container">
+            <h1 class="home__title"><em>unseen</em></h1>
+            <h1 class="home__subtitle">Digital Photo Exhibition</h1>
+            <h3 class="home__description">
+                works by <a href="/about/artist">Nichole Sobecki</a>
+            </h3>
+        </div>
+
         <div class="home__presented-by">
-            <p>presented by</p>
-            <img
-                class="home__logo"
-                src="{% static 'images/logos/OSF_logo_Reg_white.png' %}"
-                alt="Oregon Shakespeare Festival"
-              />
-            <p>in conversation with the West Coast Premiere of Mona Mansour's <em>unseen</em></p>
+            <p class="home__presented-by-text">presented by</p>
+            <img class="home__logo" src="{% static 'images/logos/OSF_logo_Reg_white.png' %}"
+                alt="Oregon Shakespeare Festival" />
+            <p class="home__presented-by-text">in conversation with the West Coast Premiere of Mona Mansour's <em>unseen</em></p>
+        </div>
+
+        <div class="home__enter">
+            <p class="home__enter-text">
+                You are invited to engage with Sobecki's work and share your response with other audience members.
+            </p>
+            <h2 class="home__enter-link">
+                <a href="/gallery/">Enter</a>
+            </h2>
         </div>
     </section>
 </main>

@@ -1,3 +1,38 @@
 body {
-    font-family: 'cormorandt-garamond', 'Times New Roman', Times, serif;
+  @include cr-light;
 }
+
+h1 {
+  font-size: $font-xl;
+}
+
+h2 {
+  font-size: $font-lg;
+}
+
+h3 {
+  font-size: $font-md;
+}
+
+p {
+  font-size: $font-sm;
+}
+
+em {
+  @include cr-light-italic;
+  font-style: italic;
+}
+
+a {
+  color: $black;
+  text-decoration: underline;
+  @include transition;
+
+  &:hover {
+    color: $osf-red;
+  }
+}
+
+// main {
+//   padding: $space-sm $space-lg;
+// }
