@@ -13,3 +13,17 @@
 @mixin transition {
   transition: all 200ms ease-in;
 }
+
+@mixin black-bg {
+  background-color: $black;
+  color: $white;
+  
+  a {
+    color: $white;
+    @include transition;
+
+    &:hover {
+      color: $osf-red;
+    }
+  }
+}

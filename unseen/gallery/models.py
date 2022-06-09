@@ -21,6 +21,9 @@ class Photo(models.Model):
     def get_absolute_url(self):
         return reverse("conversation", args=[self.slug])
 
+    def get_conversation_url(self):
+        return '/gallery/{}/conversation/'.format(self.slug)
+
     def __str__(self):
         return self.name
 

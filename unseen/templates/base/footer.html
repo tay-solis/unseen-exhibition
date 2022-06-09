@@ -2,8 +2,13 @@
 <footer class="footer {% if footer_context == 'conversation'%}footer--conversation{% endif %}">
     <div class="footer__content">
         <a class="link--unstyled" href="https://www.osfashland.org/">
+            {% if footer_context == 'conversation' %}
+            <img class="footer__logo" src="{% static 'images/logos/OSF_logo_Reg_white.png' %}"
+            alt="Oregon Shakespeare Festival" />
+            {% else %}
             <img class="footer__logo" src="{% static 'images/logos/OSF_logo_Reg_redblack.png' %}"
             alt="Oregon Shakespeare Festival" />
+            {% endif %}
         </a>
 
         <div class="footer__text-content">

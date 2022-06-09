@@ -11,6 +11,10 @@
     @include cr-light-italic;
     font-style: italic;
   }
+
+  &--conversation {
+    @include black-bg;
+  }
 }
 
 .nav {

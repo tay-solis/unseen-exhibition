@@ -157,6 +157,16 @@ a {
   justify-content: center;
   padding: 40px;
   width: 100%; }
+  .footer--conversation {
+    background-color: #000;
+    color: #FFF; }
+    .footer--conversation a {
+      color: #FFF;
+      transition: all 200ms ease-in; }
+      .footer--conversation a:hover {
+        color: #D31345; }
+    .footer--conversation .footer__content {
+      border-color: #FFF; }
   .footer__content {
     display: flex;
     border-top: 1px solid #000;
@@ -178,10 +188,32 @@ a {
   .header__title-name {
     font-family: "cormorant-garamond-light-italic", serif;
     font-style: italic; }
+  .header--conversation {
+    background-color: #000;
+    color: #FFF; }
+    .header--conversation a {
+      color: #FFF;
+      transition: all 200ms ease-in; }
+      .header--conversation a:hover {
+        color: #D31345; }
 
 .nav__links {
   margin-bottom: 8px;
   font-size: 32px; }
+
+.convo-item {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 400px auto;
+  grid-gap: 40px; }
+  .convo-item__image {
+    width: 100%;
+    max-width: 400px; }
+  .convo-item__title {
+    font-size: 32px;
+    font-style: italic;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 16px; }
 
 .home {
   background-color: #000;
@@ -189,6 +221,11 @@ a {
   height: 100vh;
   display: grid;
   grid-template-columns: 600px auto; }
+  .home a {
+    color: #FFF;
+    transition: all 200ms ease-in; }
+    .home a:hover {
+      color: #D31345; }
   .home__photo {
     filter: saturate(0%);
     max-height: 100vh;
@@ -206,10 +243,20 @@ a {
     width: 200px;
     padding: 4px 0; }
   .home__enter-link {
-    text-align: right; }
-  .home a {
-    transition: all 200ms ease-in;
+    text-align: right;
+    padding-right: 56px; }
+
+.conversation {
+  background-color: #000;
+  color: #FFF; }
+  .conversation a {
     color: #FFF;
-    text-decoration: underline; }
-    .home a:hover {
+    transition: all 200ms ease-in; }
+    .conversation a:hover {
       color: #D31345; }
+  .conversation__intro {
+    text-align: center;
+    padding: 40px; }
+  .conversation__list {
+    padding: 0 144px;
+    margin: 0 auto; }

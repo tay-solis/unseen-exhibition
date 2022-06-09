@@ -4,6 +4,14 @@
   padding: $space-lg;
   width: 100%;
 
+  &--conversation {
+    @include black-bg;
+
+    .footer__content {
+      border-color: $white;
+    }
+  }
+
   &__content {
     display: flex;
     border-top: 1px solid $black;

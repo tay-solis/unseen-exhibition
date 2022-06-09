@@ -6,6 +6,6 @@
             <p class="convo-item__response">{{photo.featured_response.response}}</p>
             <p class="convo-item__name">—{{photo.featured_response.display_name}}</p>
         {% endif %}
-        <a href="{{photo.conversation_url}}">{{photo.response_num}} Responses</a>
+        <a href="{{photo.get_conversation_url}}">{{photo.response_num}} Responses</a>
     </div>
 </article>

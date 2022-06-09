@@ -1,6 +1,5 @@
 .home {
-  background-color: $black;
-  color: $white;
+  @include black-bg;
   height: 100vh;
   display: grid;
   grid-template-columns: 600px auto;
@@ -31,15 +30,6 @@
 
   &__enter-link {
     text-align: right;
-  }
-
-  a {
-    @include transition;
-    color: $white;
-    text-decoration: underline;
-
-    &:hover {
-      color: $osf-red;
-    }
+    padding-right: $space-xl;
   }
 }

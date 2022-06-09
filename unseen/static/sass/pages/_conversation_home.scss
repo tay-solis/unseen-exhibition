@@ -1,0 +1,13 @@
+.conversation {
+  @include black-bg;
+
+  &__intro {
+    text-align: center;
+    padding: $space-lg;
+  }
+
+  &__list {
+    padding: 0 $space-xxl;
+    margin: 0 auto;
+  }
+}
