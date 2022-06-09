@@ -1,0 +1,13 @@
+<article class="convo-item">
+    <img src="{{photo.photo.url}}" class="convo-item__image">
+    <div class="convo-item__info">
+        <h3 class="convo-item__title">{{photo.name}}</h3>
+        {% if photo.comments.exists %}
+            {% if photo.featured_response %}
+                <p class="convo-item__response">{{photo.featured_response.response}}</p>
+                <p class="convo-item__name">—{{photo.featured_response.display_name}}</p>
+            {% endif %}
+            <a href="{{photo.convo_url}}">{{photo.response_num}} Responses</a>
+        {% endif %}
+    </div>
+</article>

@@ -1,0 +1,5 @@
+<section class="conversation__list">
+    {% for photo in photos %}
+        {% include 'conversation/conversation_list_item.html' with photo=photo %}
+    {% endfor %}
+</section>

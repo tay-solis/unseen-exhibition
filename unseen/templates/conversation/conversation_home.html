@@ -1,8 +1,22 @@
-{% extends 'conversation/conversation_base.html' %}
+{% extends 'base.html' %}
 
-{% block content %}
-<section class="conversation__intro">
-    <h2 class="conversation__intro-text">When we choose to look, what do we have to say?</h2>
-    <h2 class="conversation__intro-text">Choose a photo and join the conversation.</h2>
-</section>
+{% load static %}
+
+{% block header %}
+    {% include 'base/header.html' with header_text='About' link_context='conversation' show_nav=True show_gallery_link=False %}
+{% endblock %}
+
+{% block main %}
+<main class="conversation">
+    <section class="conversation__intro">
+        <h2 class="conversation__intro-text">When we choose to look, what do we have to say?<br/>Choose a photo and join the conversation.</h2>
+    </section>
+
+
+    {% include 'conversation/conversation_home_list.html' %}
+</main>
+{% endblock %}
+
+{% block footer %}
+    {% include 'base/footer.html' with footer_context='conversation' %}
 {% endblock %}

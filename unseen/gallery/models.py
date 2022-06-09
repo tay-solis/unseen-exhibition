@@ -8,6 +8,12 @@ class Photo(models.Model):
     url = models.URLField(max_length=256, blank=True)
     photo = models.ImageField(blank=False)
 
+    def response_num(self):
+        return self.comments.all().count()
+
+    def featured_response(self):
+        return self.comments.filter(featured=True).first()
+
     def __str__(self):
         return self.name
 
@@ -37,3 +43,7 @@ class Response(models.Model):
         blank=True,
         help_text="Featured comments will have special styling."
     )
+
+    @property
+    def display_name(self):
+        return "{} {}.".format(self.first_name, self.last_name[0])

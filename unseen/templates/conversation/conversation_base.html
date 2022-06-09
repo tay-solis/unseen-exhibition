@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block static %}
+{% load static %}
 
 {% block header %}
     {% include 'base/header.html' with header_text='About' link_context='conversation' show_nav=True show_gallery_link=False %}
@@ -11,5 +11,5 @@
 </main>
 
 {% block footer %}
-    {% include 'base/footer.html' with context='conversation' %}
+    {% include 'base/footer.html' with footer_context='conversation' %}
 {% endblock %}
