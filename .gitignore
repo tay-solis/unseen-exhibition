@@ -5,6 +5,7 @@ media/
 unseen/.DS_Store
 
 node_modules
+
 # dependencies
 /.pnp
 .pnp.js
@@ -25,3 +26,6 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# frontend
+webpack_bundles

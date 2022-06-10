@@ -12,6 +12,10 @@
 <main id="gallery" class="gallery"></main>
 {% endblock %}
 
+{% block extra_js %}
+  <script type="text/javascript" src="{% static 'webpack_bundles/gallery.bundle.js' %}"></script>
+{% endblock %}
+
 {% block footer %}
     {% include 'base/footer.html' with footer_context='gallery' %}
 {% endblock %}
