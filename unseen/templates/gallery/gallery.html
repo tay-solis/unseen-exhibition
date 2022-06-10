@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block header %}
+    {% include 'base/header.html' with header_text='Gallery' link_context='gallery' show_nav=False show_gallery_link=False %}
+{% endblock %}
+
+{% block main %}
+<noscript>You need to enable JavaScript to run this app.</noscript>
+
+<main id="gallery" class="gallery"></main>
+{% endblock %}
+
+{% block footer %}
+    {% include 'base/footer.html' with footer_context='gallery' %}
+{% endblock %}
