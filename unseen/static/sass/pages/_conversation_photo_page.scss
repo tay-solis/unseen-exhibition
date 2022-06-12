@@ -1,4 +1,78 @@
 .photo-convo {
   @include black-bg;
   padding: $space-lg;
+
+  &__section {
+    max-width: 750px;
+    margin: $space-md auto;
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    height: fit-content;
+  }
+
+  &__image {
+    max-width: 650px;
+  }
+
+  &__form {
+    @include transition;
+    display: block;
+    max-width: 650px;
+    max-height:650px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+
+    &--hidden {
+      display: none;
+      max-height: 0px;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+
+    &--names {
+      display: inline-block;
+    }
+
+    &--consent {
+      display: inline;
+      width: inherit;
+    }
+  }
+
+  &__label {
+    display: block;
+    padding: $space-sm 0;
+  }
+  
+  &__input-container {
+    &#first_name_container, &#last_name_container {
+      display: inline-block;
+      width: 48%;
+    }
+
+    &#first_name_container {
+      margin-right: 22px;
+    }
+  }
+
+  &__form-button {
+    display: block;
+    margin: 0 auto;
+  }
 }

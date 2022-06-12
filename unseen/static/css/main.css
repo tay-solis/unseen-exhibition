@@ -229,6 +229,9 @@ img {
   font-size: 16px; }
   .button--about {
     margin-right: 24px; }
+  .button--photo-convo {
+    color: #000;
+    background-color: #FFF; }
   .button:hover {
     background-color: #D31345; }
 
@@ -331,6 +334,49 @@ img {
     transition: all 200ms ease-in; }
     .photo-convo a:hover {
       color: #D31345; }
+  .photo-convo__section {
+    max-width: 750px;
+    margin: 24px auto; }
+  .photo-convo__image-container {
+    display: flex;
+    justify-content: center; }
+  .photo-convo__button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .photo-convo__nav {
+    height: fit-content; }
+  .photo-convo__image {
+    max-width: 650px; }
+  .photo-convo__form {
+    transition: all 200ms ease-in;
+    display: block;
+    max-width: 650px;
+    max-height: 650px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .photo-convo__form--hidden {
+      display: none;
+      max-height: 0px; }
+  .photo-convo__input {
+    display: block;
+    width: 100%; }
+    .photo-convo__input--names {
+      display: inline-block; }
+    .photo-convo__input--consent {
+      display: inline;
+      width: inherit; }
+  .photo-convo__label {
+    display: block;
+    padding: 8px 0; }
+  .photo-convo__input-container#first_name_container, .photo-convo__input-container#last_name_container {
+    display: inline-block;
+    width: 48%; }
+  .photo-convo__input-container#first_name_container {
+    margin-right: 22px; }
+  .photo-convo__form-button {
+    display: block;
+    margin: 0 auto; }
 
 .about {
   padding: 24px 144px; }

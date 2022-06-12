@@ -8,25 +8,27 @@
 
 {% block main %}
 <main class="photo-convo">
-    <section class="photo-convo__photo-container">
+    <section class="photo-convo__section photo-convo__image-container">
         <img src="{{photo.photo.url}}" class="photo-convo__image">
     </section>
-    <section class="photo-convo__photo-container">
-        <button class="nav-button nav-button--previous nav-button--conversation">
+    <section class="photo-convo__section photo-convo__button-container">
+        <button class="photo-convo__nav photo-convo__nav--previous photo-convo__nav--conversation">
             Previous
         </button>
-        <button class="photo-convo__button">Return to Gallery</button>
-        <button class="photo-convo__button">Respond</button>
+        <div class="photo-convo__section photo-convo__interactive-buttons">
+            <button class="button button--photo-convo">Return to Gallery</button>
+        <button id="respond-button" class="button button--photo-convo" onClick="">Respond</button>
+        </div>
 
-        <button class="nav-button nav-button--next nav-button--conversation">
+        <button class="photo-convo__nav photo-convo__nav--next photo-convo__nav--conversation">
             Next
         </button>
     </section>
-    <section class="photo-convo__form">
+    <section class="photo-convo__section photo-convo__form-container">
         {% include 'conversation/conversation_form.html' %}
     </section>
 
-    <section class="photo-convo__responses">
+    <section class="photo-convo__section photo-convo__responses">
         {% include 'conversation/conversation_responses.html' with comments=photo.get_comments %}
     </section>
     
@@ -35,4 +37,20 @@
 
 {% block footer %}
     {% include 'base/footer.html' with footer_context='conversation' %}
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        let formButton = document.getElementById('respond-button');
+        
+        formButton.addEventListener('click', e => {
+            console.log('clicked');
+
+            e.preventDefault();
+
+            let form = document.querySelector(".photo-convo__form");
+
+            form.classList.toggle('photo-convo__form--hidden');
+        })
+    </script>
 {% endblock %}

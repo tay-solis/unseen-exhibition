@@ -1,7 +1,6 @@
 {% for comment in comments %}
   <div class="photo-convo__response-container">
     <p class="photo-convo__response">"{{comment.response}}"</p>
-    <p class="photo-convo__response">—{{photo.featured_response.display_name}}</p>
-
+    <p class="photo-convo__response">—{{comment.display_name}}</p>
   </div>
 {% endfor %}

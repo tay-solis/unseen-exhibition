@@ -1,9 +1,10 @@
 from django.db import models
 from django.urls import reverse
+from django.forms import TextInput, Textarea, CheckboxInput, ModelForm
 
 from autoslug import AutoSlugField
 
-# Create your models here.
+
 class Photo(models.Model):
     name = models.CharField(max_length=256)
     # image = models.ImageField(blank=False)
@@ -23,7 +24,7 @@ class Photo(models.Model):
 
     def get_conversation_url(self):
         return '/gallery/{}/conversation/'.format(self.slug)
-    
+
     def get_comments(self):
         return self.comments.all()
 
@@ -63,3 +64,22 @@ class Response(models.Model):
 
     def __str__(self):
         return "'{}' —{} | response to {}".format(self.response, self.display_name, self.photo.name)
+
+
+class ResponseForm(ModelForm):
+    class Meta:
+        model = Response
+        fields = ['first_name', 'last_name', 'email',
+                  'response', 'consent_to_share', ]
+        widgets = {
+            'first_name': TextInput(attrs={'class': 'photo-convo__input  photo-convo__input--names'}),
+            'last_name': TextInput(attrs={'class': 'photo-convo__input photo-convo__input--names'}),
+            'email': TextInput(attrs={'class': 'photo-convo__input'}),
+            'response': Textarea(attrs={'rows':5, 'cols':20, 'class': 'photo-convo__input photo-convo__input--response'}),
+            'consent_to_share': CheckboxInput({'class': 'photo-convo__input photo-convo__input--consent'}),
+        }
+        help_texts = {
+            'consent_to_share': 'I grant OSF permission to share this response on social media. \
+                Your quote will be shared along with other audience responses and will appear with a \
+                first name and last initial: -- “Quote” - Liz, L.',
+        }
