@@ -201,6 +201,11 @@ a {
   margin-bottom: 8px;
   font-size: 32px; }
 
+.button {
+  font-family: "cormorant-garamond-light", serif;
+  background-color: #000;
+  color: #FFF; }
+
 .convo-item {
   max-width: 100%;
   display: grid;
@@ -214,6 +219,11 @@ a {
     font-style: italic;
     border-bottom: 1px solid #FFF;
     margin-bottom: 16px; }
+
+.g-photo {
+  width: 33.3%; }
+  .g-photo__image {
+    width: 400px; }
 
 .home {
   background-color: #000;
@@ -245,6 +255,11 @@ a {
   .home__enter-link {
     text-align: right;
     padding-right: 56px; }
+
+.gallery__photos {
+  display: flex;
+  width: 100%;
+  overflow: hidden; }
 
 .conversation {
   background-color: #000;

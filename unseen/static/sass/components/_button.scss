@@ -1,0 +1,5 @@
+.button {
+  @include cr-light;
+  background-color: $black;
+  color: $white;
+}

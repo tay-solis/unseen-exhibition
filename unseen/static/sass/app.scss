@@ -10,8 +10,13 @@ $image-path: '../images/';
 // Components
 @import 'components/footer';
 @import 'components/header';
+@import 'components/button';
 @import 'components/conversation_list_item';
+@import 'components/gallery_photo';
 
 // Pages
 @import 'pages/home';
+@import 'pages/gallery';
 @import 'pages/conversation_home';
+@import 'pages/conversation_photo_page';
+@import 'pages/about';

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% load static %}
+{% block title %}Gallery | unseen{% endblock%}
 
 {% block header %}
     {% include 'base/header.html' with header_text='Gallery' link_context='gallery' show_nav=False show_gallery_link=False %}
