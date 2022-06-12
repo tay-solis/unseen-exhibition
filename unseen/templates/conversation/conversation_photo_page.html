@@ -27,7 +27,7 @@
     </section>
 
     <section class="photo-convo__responses">
-        {% include 'conversation/conversation_responses.html' %}
+        {% include 'conversation/conversation_responses.html' with comments=photo.get_comments %}
     </section>
     
 </main>

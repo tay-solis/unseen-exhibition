@@ -1,7 +1,13 @@
 .gallery {
   &__photos {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     overflow: hidden;
+  }
+
+  &__continue {
+    display: flex;
+    justify-content: center;
   }
 }

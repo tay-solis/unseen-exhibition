@@ -20,7 +20,10 @@ p {
 
 em {
   @include cr-light-italic;
-  font-style: italic;
+}
+
+strong {
+  @include cr-bold;
 }
 
 a {
@@ -33,6 +36,12 @@ a {
   }
 }
 
-// main {
-//   padding: $space-sm $space-lg;
-// }
+img {
+  max-width: 100%;
+}
+
+.link {
+  &--unstyled {
+    text-decoration: none;
+  }
+}

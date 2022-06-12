@@ -127,7 +127,8 @@ table {
   border-spacing: 0; }
 
 body {
-  font-family: "cormorant-garamond-light", serif; }
+  font-family: "cormorant-garamond-light", serif;
+  font-weight: lighter; }
 
 h1 {
   font-size: 64px; }
@@ -143,7 +144,12 @@ p {
 
 em {
   font-family: "cormorant-garamond-light-italic", serif;
+  font-weight: lighter;
   font-style: italic; }
+
+strong {
+  font-family: "cormorant-garamond-bold", serif;
+  font-weight: bold; }
 
 a {
   color: #000;
@@ -152,10 +158,16 @@ a {
   a:hover {
     color: #D31345; }
 
+img {
+  max-width: 100%; }
+
+.link--unstyled {
+  text-decoration: none; }
+
 .footer {
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 40px 0;
   width: 100%; }
   .footer--conversation {
     background-color: #000;
@@ -180,13 +192,15 @@ a {
     margin: 8px 0; }
 
 .header {
-  padding: 40px;
+  padding: 40px 0;
   width: 100%;
   text-align: center; }
   .header__title {
     margin-bottom: 24px; }
   .header__title-name {
     font-family: "cormorant-garamond-light-italic", serif;
+    font-weight: lighter;
+    font-style: italic;
     font-style: italic; }
   .header--conversation {
     background-color: #000;
@@ -203,27 +217,54 @@ a {
 
 .button {
   font-family: "cormorant-garamond-light", serif;
+  font-weight: lighter;
+  transition: all 200ms ease-in;
   background-color: #000;
-  color: #FFF; }
+  color: #FFF;
+  border: none;
+  box-shadow: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; }
+  .button--about {
+    margin-right: 24px; }
+  .button:hover {
+    background-color: #D31345; }
 
 .convo-item {
   max-width: 100%;
   display: grid;
   grid-template-columns: 400px auto;
-  grid-gap: 40px; }
+  grid-gap: 40px;
+  margin-bottom: 64px; }
   .convo-item__image {
+    transition: all 200ms ease-in;
+    filter: saturate(0%);
     width: 100%;
     max-width: 400px; }
+    .convo-item__image:hover {
+      filter: saturate(100%); }
   .convo-item__title {
     font-size: 32px;
     font-style: italic;
     border-bottom: 1px solid #FFF;
     margin-bottom: 16px; }
+  .convo-item__text {
+    margin: 16px 0; }
+  .convo-item__name {
+    font-family: "cormorant-garamond-light-italic", serif;
+    font-weight: lighter;
+    font-style: italic; }
 
 .g-photo {
-  width: 33.3%; }
+  padding: 16px 24px;
+  transition: all 200ms ease-in;
+  filter: saturate(0%); }
+  .g-photo:hover {
+    filter: saturate(100%); }
   .g-photo__image {
-    width: 400px; }
+    max-width: 400px; }
 
 .home {
   background-color: #000;
@@ -254,12 +295,17 @@ a {
     padding: 4px 0; }
   .home__enter-link {
     text-align: right;
-    padding-right: 56px; }
+    padding-right: 64px; }
 
 .gallery__photos {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   overflow: hidden; }
+
+.gallery__continue {
+  display: flex;
+  justify-content: center; }
 
 .conversation {
   background-color: #000;
@@ -275,3 +321,52 @@ a {
   .conversation__list {
     padding: 0 144px;
     margin: 0 auto; }
+
+.photo-convo {
+  background-color: #000;
+  color: #FFF;
+  padding: 40px; }
+  .photo-convo a {
+    color: #FFF;
+    transition: all 200ms ease-in; }
+    .photo-convo a:hover {
+      color: #D31345; }
+
+.about {
+  padding: 24px 144px; }
+  .about__image {
+    max-width: 450px;
+    float: left; }
+    .about__image--playwright {
+      margin-left: 40px;
+      float: right; }
+    .about__image--artist {
+      margin-right: 40px;
+      margin-bottom: 40px; }
+  .about__text {
+    margin: 40px 0; }
+    .about__text:first-of-type {
+      margin-top: 0; }
+  .about__show-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: end; }
+  .about__show-title {
+    font-family: "cormorant-garamond-bold-italic", serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 48px; }
+  .about__show-image {
+    max-width: 100%; }
+  .about__show-text-container {
+    margin-bottom: 40px; }
+  .about__show-dates {
+    font-family: "cormorant-garamond-bold-italic", serif;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 24px; }
+  .about__show-info-container {
+    display: grid;
+    grid-template-columns: 450px auto;
+    grid-gap: 64px;
+    padding-bottom: 40px; }

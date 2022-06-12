@@ -1,5 +1,22 @@
 .button {
   @include cr-light;
+  @include transition;
+
   background-color: $black;
   color: $white;
+  border: none;
+  box-shadow: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: $font-xs;
+
+  &--about {
+    margin-right: $space-md;
+  }
+
+  &:hover {
+    background-color: $osf-red;
+  }
+
 }

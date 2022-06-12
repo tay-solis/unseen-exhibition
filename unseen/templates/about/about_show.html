@@ -9,30 +9,36 @@
 {% endblock %}
 
 {% block main %}
-<main class="about about__show">
+<main class="about about--show">
     <section class="about__show-info-container">
         <img class="about__show-image" src="{% static 'images/unseen-photo-1.jpg' %}"
             alt="Photograph of a performance of Unseen. The actor stands on the stage looking at her phone surrounded by furniture in disarray, evocative of disaster." />
         <div class="about__show-info">
-            <h1 class="about__show-title">unseen</h1>
-            <p class="about__show-info-text">
-                By Mona Mansour
-            </p>
-            <p class="about__show-info-text">
-                Directed by Evren <strong>Odcikin</strong>
-            </p>
-            <p class="about__show-info-text">
-                West Coast Premiere
-            </p>
+            <div class="about__show-text-container">
+                <h1 class="about__show-title">unseen</h1>
+                <p class="about__show-info-text">
+                    By Mona Mansour
+                </p>
+                <p class="about__show-info-text">
+                    Directed by Evren <strong>Odcikin</strong>
+                </p>
+                <p class="about__show-info-text">
+                    West Coast Premiere
+                </p>
+            </div>
             <p class="about__show-dates">
                 April 12 — July 31
             </p>
             <div class="about__show-buttons">
-                <a href="https://www.osfashland.org/en/productions/2022-plays/unseen.aspx">
-                    Learn More
+                <a class="link--unstyled" href="https://www.osfashland.org/en/productions/2022-plays/unseen.aspx">
+                    <button class="button button--about">
+                        Learn More
+                    </button>
                 </a>
-                <a href="https://tickets.osfashland.org/overview/40882">
-                    Buy Tickets
+                <a class="link--unstyled" href="https://tickets.osfashland.org/overview/40882">
+                    <button class="button button--about">
+                        Buy Tickets
+                    </button>
                 </a>
             </div>
         </div>
@@ -45,19 +51,20 @@
         would mean for our souls—personally and as a nation—if we were to truly see the impact of our actions.
     </p>
     <section class="about__section">
+        <img class="about__image about__image--playwright" src="{% static 'images/Mansour-Mona_2.jpg' %}"
+            alt="Portrait of playwright Mona Mansour." />
         <p class="about__text">
             Playwright
             <a href="https://www.monamansour.com/">Mona Mansour</a>
-            is thrilled to be making her OSF debut with <em>unseen</em>, partnering again with 
-            <a href="https://www.osfashland.org/en/artist-biographies/artistic-staff/Evren-Odcikin.aspx">Evren Odcikin</a>, 
+            is thrilled to be making her OSF debut with <em>unseen</em>, partnering again with
+            <a href="https://www.osfashland.org/en/artist-biographies/artistic-staff/Evren-Odcikin.aspx">Evren
+                Odcikin</a>,
             who directed We Swim We Talk We Go To War at Golden Thread in 2018. Her play The Vagrant Trilogy
             made its NYC debut in April 2022 at the Public Theater, directed by Mark Wing-Davey; it was postponed for
             two years due to Covid-19. The trilogy was presented at Mosaic Theater in 2018 (dir. Wing-Davey.) Of the
             trilogy: The Hour of Feeling (dir. Wing-Davey) premiered at the Humana Fest, and an Arabic translation was
             presented at NYU Abu Dhabi.
         </p>
-        <img class="about__show-image" src="{% static 'images/Mansour-Mona_2.jpg' %}"
-            alt="Portrait of playwright Mona Mansour." />
     </section>
 
 </main>

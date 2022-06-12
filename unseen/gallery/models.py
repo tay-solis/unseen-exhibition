@@ -23,6 +23,9 @@ class Photo(models.Model):
 
     def get_conversation_url(self):
         return '/gallery/{}/conversation/'.format(self.slug)
+    
+    def get_comments(self):
+        return self.comments.all()
 
     def __str__(self):
         return self.name
@@ -57,3 +60,6 @@ class Response(models.Model):
     @property
     def display_name(self):
         return "{} {}.".format(self.first_name, self.last_name[0])
+
+    def __str__(self):
+        return "'{}' —{} | response to {}".format(self.response, self.display_name, self.photo.name)

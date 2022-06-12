@@ -3,8 +3,10 @@
   display: grid;
   grid-template-columns: 400px auto;
   grid-gap: $space-lg;
+  margin-bottom: $space-xl;
 
   &__image {
+    @include bw-image;
     width: 100%;
     max-width: 400px;
   }
@@ -14,5 +16,13 @@
     font-style: italic;
     border-bottom: 1px solid $white;
     margin-bottom: $space-ms;
+  }
+
+  &__text {
+    margin: $space-ms 0;
+  }
+
+  &__name {
+    @include cr-light-italic;
   }
 }

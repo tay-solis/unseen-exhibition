@@ -1,7 +1,8 @@
 .g-photo {
-  width: 33.3%;
+  padding: $space-ms $space-md;
+  @include bw-image;
   
   &__image {
-    width: 400px;
+    max-width: 400px;
   }
 }

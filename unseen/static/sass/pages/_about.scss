@@ -1,0 +1,57 @@
+.about {
+  padding: $space-md $space-xxl;
+
+  &__image {
+    max-width: 450px;
+    float: left;
+
+    &--playwright {
+      margin-left: $space-lg;
+      float: right;
+    }
+
+    &--artist {
+      margin-right: $space-lg;
+      margin-bottom: $space-lg
+    }
+  }
+
+  &__text {
+    margin: $space-lg 0;
+
+    &:first-of-type{
+      margin-top: 0;
+    }
+  }
+
+  &__show-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  &__show-title {
+    @include cr-bold-italic;
+    font-size: $font-lg;
+  }
+
+  &__show-image {
+    max-width: 100%;
+  }
+
+  &__show-text-container {
+    margin-bottom: $space-lg;
+  }
+
+  &__show-dates {
+    @include cr-bold-italic;
+    margin-bottom: $space-md;
+  }
+
+  &__show-info-container {
+    display: grid;
+    grid-template-columns: 450px auto;
+    grid-gap: $space-xl;
+    padding-bottom: $space-lg;
+  }
+}

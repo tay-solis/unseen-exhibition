@@ -4,20 +4,43 @@
 
 @mixin cr-light {
   font-family: "cormorant-garamond-light", serif;
+  font-weight: lighter;
 }
 
 @mixin cr-light-italic {
   font-family: "cormorant-garamond-light-italic", serif;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+@mixin cr-bold {
+  font-family: "cormorant-garamond-bold", serif;
+  font-weight: bold;
+}
+
+@mixin cr-bold-italic {
+  font-family: "cormorant-garamond-bold-italic", serif;
+  font-weight: bold;
+  font-style: italic;
 }
 
 @mixin transition {
   transition: all 200ms ease-in;
 }
 
+@mixin bw-image {
+  @include transition;
+  filter: saturate(0%);
+
+  &:hover {
+    filter: saturate(100%);
+  }
+}
+
 @mixin black-bg {
   background-color: $black;
   color: $white;
-  
+
   a {
     color: $white;
     @include transition;

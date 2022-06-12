@@ -3,9 +3,13 @@
     <div class="convo-item__info">
         <h3 class="convo-item__title">{{photo.name}}</h3>
         {% if photo.featured_response %}
-            <p class="convo-item__response">{{photo.featured_response.response}}</p>
-            <p class="convo-item__name">—{{photo.featured_response.display_name}}</p>
+        <p class="convo-item__text convo-item__response">"{{photo.featured_response.response}}"</p>
+        <p class="convo-item__text convo-item__name">—{{photo.featured_response.display_name}}</p>
         {% endif %}
-        <a href="{{photo.get_conversation_url}}">{{photo.response_num}} Responses</a>
+        <a href="{{photo.get_conversation_url}}">
+            <p class="convo-item__text">
+                {{photo.response_num}} Response{% if photo.response_num != 1%}s{% endif %}
+            </p>
+        </a>
     </div>
 </article>

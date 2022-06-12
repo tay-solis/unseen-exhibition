@@ -5,56 +5,73 @@
 {% block title %}About the Artist | unseen{% endblock %}
 
 {% block header %}
-    {% include 'base/header.html' with header_text='Digital Photo Exhibition' link_context='artist' show_nav=True show_gallery_link=True %}
+{% include 'base/header.html' with header_text='Digital Photo Exhibition' link_context='artist' show_nav=True show_gallery_link=True %}
 {% endblock %}
 
 {% block main %}
 <main class="about about__artist">
-    <p class="about__text">
-        <a href="https://www.nicholesobecki.com/">Nichole Sobecki</a> is a photographer and filmmaker based in 
-        Nairobi, Kenya. She is represented internationally by the photo agency VII.
-    </p>
-    <p class="about__text">
-        Nichole was born in the state of New York and graduated from Tufts University with a degree in political
-        science. She began her career in Turkey, Lebanon, and Syria, focusing on regional issues related to identity,
-        conflict, and human rights. From 2012-2015 Nichole led Agence France-Presse’s East Africa video bureau before
-        immersing herself in documentary photography. She is also a contributor to Everyday Africa, a collection of
-        images shot on mobile phones across the continent, and an attempt to showcase the moments missing from dramatic
-        news images — everyday life that is neither idealized nor debased.
-    </p>
-    <p class="about__text">
-        Nichole aims to create photographs and films that demand consideration for the lives of those represented –
-        their joys, challenges, and ultimately their humanity. Amidst our fractured present existence, she believes that
-        a well-told story can cut through the noise, deepen empathy, and inspire a more conscious world.
-    </p>
-    <p class="about__text">
-        The primary focus of Nichole’s work is on humanity’s fraught, intimate, and ultimately unbreakable connection to
-        the natural world. In 2016 Nichole began her body of work entitled Where Our Land Was, supported by The
-        GroundTruth Project, which investigates the human consequences of significant environmental change in Somalia.
-        She is currently exploring the vital role the Congo Basin plays in the ecological balance of our planet as a
-        National Geographic Explorer. As climate change advances, sustained photography must illuminate the complex and
-        multifaceted problems underway, evoke the power and beauty of the world we share, and remind us all of our
-        collective responsibility to fix what we have broken.
-    </p>
-    <p class="about__text">
-        In 2022 Nichole was honored with an ASME Award for Cheetahs for Sale which goes inside the trafficking network
-        helping to drain Africa of its cheetah cubs--and the efforts by Somalilanders to stop the illegal trade. In 2021
-        she was shortlisted for the Leica Oskar Barnack Award (LOBA) for Where Our Land Was. In 2018 she was awarded the
-        Robert F. Kennedy Human Rights prize in new media for her images documenting Europe's response to the African
-        migration crisis. In 2015 Nichole was a Rory Peck Awards News Finalist for her coverage of the Westgate mall
-        attacks in Kenya. Her work has also been recognized by Pictures of the Year, the One World Media Awards, the
-        Alexandra Boulat Award for Photojournalism, The Magenta Foundation, and The Jacob Burns Film Center, among
-        others.
-    </p>
-    <p class="about__text">
-        Nichole’s photography has been exhibited at The United Nations Headquarters and Photoville in
-        New York City, the Kennedy Center for the Performing Arts and the U.S. Institute of Peace in Washington, DC,
-        Fort Mason Center for Arts & Culture in San Francisco, the Musée des Arts et Métiers in Paris, The Nikola Rukaj
-        Gallery in Toronto, and beyond. She is a passionate teacher, workshop leader, and speaker.
-    </p>
+    <img class="about__image about__image--artist" src="{% static 'images/Nichole_Sobecki.jpg' %}"
+        alt="Portrait of artist Nichole Sobecki." />
+    <div class="about__text-container">
+        <p class="about__text">
+            <a href="https://www.nicholesobecki.com/">Nichole Sobecki</a> is a photographer and filmmaker based in
+            Nairobi, Kenya. She is represented internationally by the photo agency VII.
+        </p>
+        <p class="about__text">
+            Nichole was born in the state of New York and graduated from Tufts University with a degree in political
+            science. She began her career in Turkey, Lebanon, and Syria, focusing on regional issues related to
+            identity,
+            conflict, and human rights. From 2012-2015 Nichole led Agence France-Presse’s East Africa video bureau
+            before
+            immersing herself in documentary photography. She is also a contributor to Everyday Africa, a collection of
+            images shot on mobile phones across the continent, and an attempt to showcase the moments missing from
+            dramatic
+            news images — everyday life that is neither idealized nor debased.
+        </p>
+        <p class="about__text">
+            Nichole aims to create photographs and films that demand consideration for the lives of those represented –
+            their joys, challenges, and ultimately their humanity. Amidst our fractured present existence, she believes
+            that
+            a well-told story can cut through the noise, deepen empathy, and inspire a more conscious world.
+        </p>
+        <p class="about__text">
+            The primary focus of Nichole’s work is on humanity’s fraught, intimate, and ultimately unbreakable
+            connection to
+            the natural world. In 2016 Nichole began her body of work entitled Where Our Land Was, supported by The
+            GroundTruth Project, which investigates the human consequences of significant environmental change in
+            Somalia.
+            She is currently exploring the vital role the Congo Basin plays in the ecological balance of our planet as a
+            National Geographic Explorer. As climate change advances, sustained photography must illuminate the complex
+            and
+            multifaceted problems underway, evoke the power and beauty of the world we share, and remind us all of our
+            collective responsibility to fix what we have broken.
+        </p>
+        <p class="about__text">
+            In 2022 Nichole was honored with an ASME Award for Cheetahs for Sale which goes inside the trafficking
+            network
+            helping to drain Africa of its cheetah cubs--and the efforts by Somalilanders to stop the illegal trade. In
+            2021
+            she was shortlisted for the Leica Oskar Barnack Award (LOBA) for Where Our Land Was. In 2018 she was awarded
+            the
+            Robert F. Kennedy Human Rights prize in new media for her images documenting Europe's response to the
+            African
+            migration crisis. In 2015 Nichole was a Rory Peck Awards News Finalist for her coverage of the Westgate mall
+            attacks in Kenya. Her work has also been recognized by Pictures of the Year, the One World Media Awards, the
+            Alexandra Boulat Award for Photojournalism, The Magenta Foundation, and The Jacob Burns Film Center, among
+            others.
+        </p>
+        <p class="about__text">
+            Nichole’s photography has been exhibited at The United Nations Headquarters and Photoville in
+            New York City, the Kennedy Center for the Performing Arts and the U.S. Institute of Peace in Washington, DC,
+            Fort Mason Center for Arts & Culture in San Francisco, the Musée des Arts et Métiers in Paris, The Nikola
+            Rukaj
+            Gallery in Toronto, and beyond. She is a passionate teacher, workshop leader, and speaker.
+        </p>
+    </div>
+
 </main>
 {% endblock %}
 
 {% block footer %}
-    {% include 'base/footer.html' %}
+{% include 'base/footer.html' %}
 {% endblock %}
