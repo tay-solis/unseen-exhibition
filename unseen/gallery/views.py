@@ -16,6 +16,10 @@ class PhotoListView(ListView):
     model = Photo
     template_name = "gallery/gallery.html"
 
+class PhotoView(ListView):
+    model = Photo
+    template_name = "gallery/gallery.html"
+
 
 # Create your views here.
 class PhotoConversationView(DetailView):
@@ -69,6 +73,18 @@ class PhotoConversationView(DetailView):
             return self.render_to_response(context=context)
 
         return self.render_to_response(context=context)
+
+
+class PhotoApiView(APIView):
+    def get(self, request, *args, **kwargs):
+        '''
+        Get one photo by slug
+        '''
+        slug = self.kwargs.get('slug', None)
+        self.kwargs['slug'] = slug
+        photo = Photo.objects.get(slug=slug)
+        serializer = PhotoSerializer(photo)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class PhotoListApiView(APIView):

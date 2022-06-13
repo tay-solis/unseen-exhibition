@@ -6,7 +6,7 @@ from autoslug import AutoSlugField
 
 
 class Photo(models.Model):
-    name = models.CharField(max_length=256)
+    name = models.CharField(max_length=256, unique=True)
     # image = models.ImageField(blank=False)
     description = models.CharField(max_length=256, blank=True)
     url = models.URLField(max_length=256, blank=True)

@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Gallery from "./Gallery";
+import GalleryRouter from "./GalleryRouter";
 
 const e = React.createElement;
 
 const domContainer = document.querySelector('#gallery');
 const root = ReactDOM.createRoot(domContainer);
-root.render(e(Gallery));
+root.render(e(GalleryRouter));
