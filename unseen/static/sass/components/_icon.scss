@@ -1,0 +1,24 @@
+.icon {
+  @include icon;
+  @include transition;
+
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+
+  &--previous-gallery {
+    background-color: $black;
+    -webkit-mask-image: url("../images/icons/arrow_back.svg");
+    mask-image: url("../images/icons/arrow_back.svg");
+    margin-right: $space-xs;
+    margin-top: -2px;
+  }
+
+  &--next-gallery {
+    background: $black;
+    -webkit-mask-image: url("../images/icons/arrow_forward.svg");
+    mask-image: url("../images/icons/arrow_forward.svg");
+    margin-left: $space-xs;
+    margin-top: -2px;
+  }
+}

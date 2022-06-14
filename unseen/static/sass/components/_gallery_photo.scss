@@ -7,7 +7,18 @@
   text-align: center;
 
   &__image {
-    max-width: 400px;
+    @include transition;
+    max-width: 80%;
     margin: 0 auto;
+  }
+
+  &__info {
+    margin: $space-ms;
+  }
+
+  &__title {
+    @include cr-light-italic;
+    font-size: $font-md;
+    margin-bottom: $space-xs;
   }
 }

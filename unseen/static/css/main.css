@@ -235,6 +235,22 @@ img {
   .button:hover {
     background-color: #D31345; }
 
+.control-button {
+  transition: all 200ms ease-in;
+  display: flex;
+  background: none;
+  border: none; }
+  .control-button__text {
+    font-family: "cormorant-garamond-light", serif;
+    font-weight: lighter;
+    text-decoration: underline;
+    font-size: 32px;
+    line-height: 36px; }
+  .control-button:hover {
+    color: #D31345; }
+    .control-button:hover .icon {
+      background-color: #D31345; }
+
 .convo-item {
   max-width: 100%;
   display: grid;
@@ -270,8 +286,41 @@ img {
   .g-photo:hover {
     filter: saturate(100%); }
   .g-photo__image {
-    max-width: 400px;
+    transition: all 200ms ease-in;
+    max-width: 80%;
     margin: 0 auto; }
+  .g-photo__info {
+    margin: 16px; }
+  .g-photo__title {
+    font-family: "cormorant-garamond-light-italic", serif;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 32px;
+    margin-bottom: 4px; }
+
+.icon {
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  transition: all 200ms ease-in;
+  display: inline-block;
+  height: 36px;
+  width: 36px; }
+  .icon--previous-gallery {
+    background-color: #000;
+    -webkit-mask-image: url("../images/icons/arrow_back.svg");
+    mask-image: url("../images/icons/arrow_back.svg");
+    margin-right: 4px;
+    margin-top: -2px; }
+  .icon--next-gallery {
+    background: #000;
+    -webkit-mask-image: url("../images/icons/arrow_forward.svg");
+    mask-image: url("../images/icons/arrow_forward.svg");
+    margin-left: 4px;
+    margin-top: -2px; }
 
 .home {
   background-color: #000;
@@ -310,6 +359,7 @@ img {
     width: 100%;
     position: relative;
     display: flex;
+    align-items: center;
     transition: all 250ms linear;
     -ms-overflow-style: none;
     /* hide scrollbar in IE and Edge */
@@ -323,6 +373,10 @@ img {
   .gallery__continue {
     display: flex;
     justify-content: center; }
+  .gallery__controls {
+    margin: 24px 64px;
+    display: flex;
+    justify-content: space-between; }
 
 .conversation {
   background-color: #000;

@@ -4,6 +4,7 @@
     width: 100%;
     position: relative;
     display: flex;
+    align-items: center;
     transition: all 250ms linear;
     -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
     scrollbar-width: none;  /* hide scrollbar in Firefox */
@@ -24,5 +25,11 @@
   &__continue {
     display: flex;
     justify-content: center;
+  }
+
+  &__controls {
+    margin: $space-md $space-xl;
+    display: flex;
+    justify-content: space-between;
   }
 }

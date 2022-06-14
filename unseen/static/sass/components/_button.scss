@@ -23,5 +23,26 @@
   &:hover {
     background-color: $osf-red;
   }
+}
 
+.control-button {
+  @include transition;
+  display: flex;
+  background: none;
+  border: none;
+  
+  &__text {
+    @include cr-light;
+    text-decoration: underline;
+    font-size: $font-md;
+    line-height: 36px;
+  }
+
+  &:hover {
+    color: $osf-red;
+
+    .icon {
+      background-color: $osf-red;
+    }
+  }
 }
