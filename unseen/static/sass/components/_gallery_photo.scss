@@ -1,8 +1,13 @@
 .g-photo {
-  padding: $space-ms $space-md;
   @include bw-image;
-  
+
+  width: calc(100%/3);
+  flex-shrink: 0;
+  flex-grow: 1;
+  text-align: center;
+
   &__image {
     max-width: 400px;
+    margin: 0 auto;
   }
 }

@@ -1,10 +1,25 @@
 .gallery {
   &__photos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    // display: flex;
     width: 100%;
-    overflow: hidden;
+    position: relative;
+    display: flex;
+    transition: all 250ms linear;
+    -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
+    scrollbar-width: none;  /* hide scrollbar in Firefox */
+
+    &::-webkit-scrollbar, &::-moz-scrollbar {
+      display: none;
+    }
   }
+
+  /* hide scrollbar in webkit browser */
+
+  &__photos-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
 
   &__continue {
     display: flex;
