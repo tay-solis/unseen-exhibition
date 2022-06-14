@@ -1,0 +1,54 @@
+.fs-photo {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: $black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__control-wrapper {
+    position: fixed;
+    top: $space-lg;
+    width: 100%;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__image {
+    max-height: 100vh;
+    margin: 0 auto;
+  }
+
+  &__info-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__info {
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $space-ms $space-md;
+  }
+
+  &__title {
+    font-size: $font-s;
+    border-right: 1px solid $black;
+    padding-right: $space-xs;
+  }
+
+  &__description {
+    padding-left: $space-xs;
+    font-size: $font-xs;
+  }
+}

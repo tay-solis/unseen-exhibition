@@ -1,6 +1,6 @@
 .photo-convo {
   @include black-bg;
-  padding: $space-lg;
+  padding: $space-xs $space-lg;
 
   &__section {
     max-width: 750px;

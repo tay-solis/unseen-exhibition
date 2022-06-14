@@ -1,3 +1,18 @@
+@mixin previous-icon {
+  -webkit-mask-image: url("../images/icons/arrow_back.svg");
+    mask-image: url("../images/icons/arrow_back.svg");
+}
+
+@mixin next-icon {
+  -webkit-mask-image: url("../images/icons/arrow_forward.svg");
+    mask-image: url("../images/icons/arrow_forward.svg");
+}
+
+@mixin close-icon {
+  -webkit-mask-image: url("../images/icons/close.svg");
+    mask-image: url("../images/icons/close.svg");
+}
+
 .icon {
   @include icon;
   @include transition;
@@ -7,18 +22,37 @@
   width: 36px;
 
   &--previous-gallery {
+    @include previous-icon;
     background-color: $black;
-    -webkit-mask-image: url("../images/icons/arrow_back.svg");
-    mask-image: url("../images/icons/arrow_back.svg");
     margin-right: $space-xs;
     margin-top: -2px;
   }
 
   &--next-gallery {
+    @include next-icon;
     background: $black;
-    -webkit-mask-image: url("../images/icons/arrow_forward.svg");
-    mask-image: url("../images/icons/arrow_forward.svg");
     margin-left: $space-xs;
+    margin-top: -2px;
+  }
+  
+  &--previous-fs {
+    @include previous-icon;
+    background-color: $white;
+    margin-right: $space-xs;
+    margin-top: -2px;
+  }
+
+  &--next-fs {
+    @include next-icon;
+    background: $white;
+    margin-left: $space-xs;
+    margin-top: -2px;
+  }
+
+  &--close-fs {
+    @include close-icon;
+    background: $white;
+    margin-right: $space-xs;
     margin-top: -2px;
   }
 }
