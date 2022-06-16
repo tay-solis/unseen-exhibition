@@ -2,15 +2,17 @@
   {% csrf_token %}
 
   {% for field in form %}
-  <div id="{{field.name}}_container" class="photo-convo__input-container">
-    <label class="photo-convo__label" id="{{field.name}}_label">{{ field.label }}</label>
+    <div id="{{field.name}}_container" class="photo-convo__input-container">
+      {% if field.name != "consent_to_share" %}
+        <label class="photo-convo__label" id="{{field.name}}_label">{{ field.label }}</label>
+      {% endif %}
 
-    {{ field }}
+      {{ field }}
 
-    {% if field.help_text %}
-      <span class="photo-convo__help-text">{{field.help_text}}</span>
-    {% endif %}
-  </div>
+      {% if field.help_text %}
+        <span class="photo-convo__help-text">{{field.help_text}}</span>
+      {% endif %}
+    </div>
 
   {% endfor %}
 

@@ -5,6 +5,12 @@
   &__section {
     max-width: 750px;
     margin: $space-md auto;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__response-container {
+    padding: $space-md;
   }
 
   &__image-container {
@@ -30,10 +36,9 @@
     @include transition;
     display: block;
     max-width: 650px;
-    max-height:650px;
+    max-height: 650px;
     margin: 0 auto;
     overflow: hidden;
-    
 
     &--hidden {
       display: none;
@@ -44,14 +49,48 @@
   &__input {
     display: block;
     width: 100%;
+    margin-bottom: $space-xs;
+    min-height: 28px;
+    border-radius: 3px;
+    border: 2px solid $grey;
+
+    &:focus {
+      border-color: $osf-red;
+    }
 
     &--names {
       display: inline-block;
     }
 
     &--consent {
-      display: inline;
-      width: inherit;
+      display: grid;
+      place-content: center;
+      appearance: none;
+      background-color: $black;
+      margin: 0;
+      font: inherit;
+      color: $osf-red;
+      width: 18px;
+      min-height: unset;
+      height: 18px;
+      border: 2px solid $osf-red;
+      border-radius: 2px;
+      transform: translateY(-0.075em);
+      margin-top: $space-ms;
+
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        transform: scale(0);
+        box-shadow: inset 12px 12px $osf-red;
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      }
+
+      &:checked::before {
+        transform: scale(1);
+      }
     }
   }
 
@@ -59,15 +98,24 @@
     display: block;
     padding: $space-sm 0;
   }
-  
+
   &__input-container {
-    &#first_name_container, &#last_name_container {
+    margin-bottom: $space-sm;
+
+    &#first_name_container,
+    &#last_name_container {
       display: inline-block;
       width: 48%;
     }
 
     &#first_name_container {
       margin-right: 22px;
+    }
+
+    &#consent_to_share_container{
+      display: grid;
+      grid-template-columns: 20px auto;
+      grid-gap: $space-sm;
     }
   }
 

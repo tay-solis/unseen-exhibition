@@ -21,38 +21,31 @@
   height: 36px;
   width: 36px;
 
-  &--previous-gallery {
+  &--previous-gallery, &--previous-fs, &--previous-convo  {
     @include previous-icon;
     background-color: $black;
     margin-right: $space-xs;
     margin-top: -2px;
   }
 
-  &--next-gallery {
+  &--next-gallery, &--next-fs, &--next-convo {
     @include next-icon;
     background: $black;
     margin-left: $space-xs;
     margin-top: -2px;
   }
-  
-  &--previous-fs {
-    @include previous-icon;
-    background-color: $white;
-    margin-right: $space-xs;
-    margin-top: -2px;
-  }
 
-  &--next-fs {
-    @include next-icon;
-    background: $white;
-    margin-left: $space-xs;
-    margin-top: -2px;
-  }
 
   &--close-fs {
     @include close-icon;
     background: $white;
     margin-right: $space-xs;
     margin-top: -2px;
+  }
+
+  &--next-convo, &--previous-convo {
+    background-color: $white;
+    height: 32px;
+    width: 32px;
   }
 }

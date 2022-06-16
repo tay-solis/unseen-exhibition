@@ -214,7 +214,7 @@ img {
 
 .nav__links {
   margin-bottom: 8px;
-  font-size: 32px; }
+  font-size: 24px; }
 
 .button {
   font-family: "cormorant-garamond-light", serif;
@@ -232,7 +232,11 @@ img {
     margin-right: 24px; }
   .button--photo-convo {
     color: #000;
-    background-color: #FFF; }
+    background-color: #FFF;
+    margin-right: 24px; }
+  .button--photo-convo-active {
+    color: #FFF;
+    background-color: #333; }
   .button--fs {
     position: absolute;
     bottom: 64px;
@@ -242,29 +246,29 @@ img {
 
 .control-button {
   transition: all 200ms ease-in;
+  font-family: "cormorant-garamond-light", serif;
+  font-weight: lighter;
   display: flex;
   background: none;
-  border: none; }
-  .control-button__text {
-    font-family: "cormorant-garamond-light", serif;
-    font-weight: lighter;
-    text-decoration: underline;
-    font-size: 32px;
-    line-height: 36px; }
+  border: none;
+  text-decoration: underline;
+  font-size: 32px;
+  line-height: 36px;
+  color: #FFF; }
+  .control-button--gallery {
+    color: #000; }
   .control-button--fs {
-    color: #FFF;
     padding: 8px 24px; }
+  .control-button--previous-convo, .control-button--next-convo {
+    font-size: 24px;
+    line-height: 32px; }
+  .control-button--close-fs, .control-button--previous-fs {
+    padding-right: 64px;
+    background-image: -webkit-linear-gradient(to right, #000, rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(to right, #000, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0)); }
   .control-button--close-fs {
-    margin-bottom: 4px;
-    padding-right: 64px;
-    background-image: -webkit-linear-gradient(to right, #000, rgba(0, 0, 0, 0));
-    background-image: -moz-linear-gradient(to right, #000, rgba(0, 0, 0, 0));
-    background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0)); }
-  .control-button--previous-fs {
-    padding-right: 64px;
-    background-image: -webkit-linear-gradient(to right, #000, rgba(0, 0, 0, 0));
-    background-image: -moz-linear-gradient(to right, #000, rgba(0, 0, 0, 0));
-    background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0)); }
+    margin-bottom: 4px; }
   .control-button--next-fs {
     padding-left: 64px;
     background-image: -webkit-linear-gradient(to left, #000, rgba(0, 0, 0, 0));
@@ -333,28 +337,16 @@ img {
   display: inline-block;
   height: 36px;
   width: 36px; }
-  .icon--previous-gallery {
+  .icon--previous-gallery, .icon--previous-fs, .icon--previous-convo {
     -webkit-mask-image: url("../images/icons/arrow_back.svg");
     mask-image: url("../images/icons/arrow_back.svg");
     background-color: #000;
     margin-right: 4px;
     margin-top: -2px; }
-  .icon--next-gallery {
+  .icon--next-gallery, .icon--next-fs, .icon--next-convo {
     -webkit-mask-image: url("../images/icons/arrow_forward.svg");
     mask-image: url("../images/icons/arrow_forward.svg");
     background: #000;
-    margin-left: 4px;
-    margin-top: -2px; }
-  .icon--previous-fs {
-    -webkit-mask-image: url("../images/icons/arrow_back.svg");
-    mask-image: url("../images/icons/arrow_back.svg");
-    background-color: #FFF;
-    margin-right: 4px;
-    margin-top: -2px; }
-  .icon--next-fs {
-    -webkit-mask-image: url("../images/icons/arrow_forward.svg");
-    mask-image: url("../images/icons/arrow_forward.svg");
-    background: #FFF;
     margin-left: 4px;
     margin-top: -2px; }
   .icon--close-fs {
@@ -363,6 +355,10 @@ img {
     background: #FFF;
     margin-right: 4px;
     margin-top: -2px; }
+  .icon--next-convo, .icon--previous-convo {
+    background-color: #FFF;
+    height: 32px;
+    width: 32px; }
 
 .home {
   background-color: #000;
@@ -431,6 +427,8 @@ img {
   .conversation__intro {
     text-align: center;
     padding: 40px; }
+  .conversation__intro-text {
+    font-size: 32px; }
   .conversation__list {
     padding: 0 144px;
     margin: 0 auto; }
@@ -446,7 +444,11 @@ img {
       color: #D31345; }
   .photo-convo__section {
     max-width: 750px;
-    margin: 24px auto; }
+    margin: 24px auto;
+    display: flex;
+    flex-flow: row wrap; }
+  .photo-convo__response-container {
+    padding: 24px; }
   .photo-convo__image-container {
     display: flex;
     justify-content: center; }
@@ -470,20 +472,54 @@ img {
       max-height: 0px; }
   .photo-convo__input {
     display: block;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 4px;
+    min-height: 28px;
+    border-radius: 3px;
+    border: 2px solid #555; }
+    .photo-convo__input:focus {
+      border-color: #D31345; }
     .photo-convo__input--names {
       display: inline-block; }
     .photo-convo__input--consent {
-      display: inline;
-      width: inherit; }
+      display: grid;
+      place-content: center;
+      appearance: none;
+      background-color: #000;
+      margin: 0;
+      font: inherit;
+      color: #D31345;
+      width: 18px;
+      min-height: unset;
+      height: 18px;
+      border: 2px solid #D31345;
+      border-radius: 2px;
+      transform: translateY(-0.075em);
+      margin-top: 16px; }
+      .photo-convo__input--consent::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        transform: scale(0);
+        box-shadow: inset 12px 12px #D31345;
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%); }
+      .photo-convo__input--consent:checked::before {
+        transform: scale(1); }
   .photo-convo__label {
     display: block;
     padding: 8px 0; }
-  .photo-convo__input-container#first_name_container, .photo-convo__input-container#last_name_container {
-    display: inline-block;
-    width: 48%; }
-  .photo-convo__input-container#first_name_container {
-    margin-right: 22px; }
+  .photo-convo__input-container {
+    margin-bottom: 8px; }
+    .photo-convo__input-container#first_name_container, .photo-convo__input-container#last_name_container {
+      display: inline-block;
+      width: 48%; }
+    .photo-convo__input-container#first_name_container {
+      margin-right: 22px; }
+    .photo-convo__input-container#consent_to_share_container {
+      display: grid;
+      grid-template-columns: 20px auto;
+      grid-gap: 8px; }
   .photo-convo__form-button {
     display: block;
     margin: 0 auto; }

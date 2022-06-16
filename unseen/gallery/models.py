@@ -75,7 +75,7 @@ class ResponseForm(ModelForm):
             'first_name': TextInput(attrs={'class': 'photo-convo__input  photo-convo__input--names'}),
             'last_name': TextInput(attrs={'class': 'photo-convo__input photo-convo__input--names'}),
             'email': TextInput(attrs={'class': 'photo-convo__input'}),
-            'response': Textarea(attrs={'rows':5, 'cols':20, 'class': 'photo-convo__input photo-convo__input--response'}),
+            'response': Textarea(attrs={'rows':3, 'cols':20, 'class': 'photo-convo__input photo-convo__input--response'}),
             'consent_to_share': CheckboxInput({'class': 'photo-convo__input photo-convo__input--consent'}),
         }
         help_texts = {

@@ -19,7 +19,7 @@ function FullScreenPhoto(props) {
       .then((response) => setPhoto(response.data))
       .catch((err) => setError(err))
       .finally(() => setLoaded(true));
-  });
+  }, []);
 
   return (
     <div className="fs-photo">

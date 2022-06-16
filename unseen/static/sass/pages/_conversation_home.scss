@@ -6,6 +6,10 @@
     padding: $space-lg;
   }
 
+  &__intro-text {
+    font-size: $font-md;
+  }
+
   &__list {
     padding: 0 $space-xxl;
     margin: 0 auto;

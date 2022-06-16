@@ -18,6 +18,12 @@
   &--photo-convo {
     color: $black;
     background-color: $white;
+    margin-right: $space-md;
+  }
+
+  &--photo-convo-active {
+    color: $white;
+    background-color: $darkGrey;
   }
 
   &--fs {
@@ -33,40 +39,51 @@
 
 .control-button {
   @include transition;
+  @include cr-light;
+
   display: flex;
   background: none;
   border: none;
+  text-decoration: underline;
+  font-size: $font-md;
+  line-height: 36px;
+  color: $white;
 
-  &__text {
-    @include cr-light;
-    text-decoration: underline;
-    font-size: $font-md;
-    line-height: 36px;
+  &--gallery {
+    color: $black;
   }
 
   &--fs {
-    color: $white;
     padding: $space-sm $space-md;
+  }
+
+  &--previous-convo, &--next-convo {
+    font-size: $font-sm;
+    line-height: 32px;
+  }
+
+  &--close-fs, &--previous-fs {
+    padding-right: $space-xl;
+    background-image: -webkit-linear-gradient(
+      to right,
+      $black,
+      rgba(0, 0, 0, 0)
+    );
+    background-image: -moz-linear-gradient(to right, $black, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, $black, rgba(0, 0, 0, 0));
   }
 
   &--close-fs {
     margin-bottom: $space-xs;
-    padding-right: $space-xl;
-    background-image: -webkit-linear-gradient(to right, $black, rgba(0, 0, 0, 0));
-    background-image: -moz-linear-gradient(to right, $black, rgba(0, 0, 0, 0));
-    background-image: linear-gradient(to right, $black, rgba(0, 0, 0, 0));
-  }
-
-  &--previous-fs {
-    padding-right: $space-xl;
-    background-image: -webkit-linear-gradient(to right, $black, rgba(0, 0, 0, 0));
-    background-image: -moz-linear-gradient(to right, $black, rgba(0, 0, 0, 0));
-    background-image: linear-gradient(to right, $black, rgba(0, 0, 0, 0));
   }
 
   &--next-fs {
     padding-left: $space-xl;
-    background-image: -webkit-linear-gradient(to left, $black, rgba(0, 0, 0, 0));
+    background-image: -webkit-linear-gradient(
+      to left,
+      $black,
+      rgba(0, 0, 0, 0)
+    );
     background-image: -moz-linear-gradient(to left, $black, rgba(0, 0, 0, 0));
     background-image: linear-gradient(to left, $black, rgba(0, 0, 0, 0));
   }

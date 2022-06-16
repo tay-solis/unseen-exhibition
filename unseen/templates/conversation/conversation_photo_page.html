@@ -2,8 +2,10 @@
 
 {% load static %}
 
+{% block title %}{{photo.name}} | Conversation{% endblock %}
+
 {% block header %}
-    {% include 'base/header.html' with header_text='Conversation' link_context='conversation' show_nav=True show_gallery_link=False %}
+{% include 'base/header.html' with header_text='Conversation' link_context='conversation' show_nav=True show_gallery_link=False %}
 {% endblock %}
 
 {% block main %}
@@ -12,16 +14,21 @@
         <img src="{{photo.photo.url}}" class="photo-convo__image">
     </section>
     <section class="photo-convo__section photo-convo__button-container">
-        <button class="photo-convo__nav photo-convo__nav--previous photo-convo__nav--conversation">
-            Previous
+        <button class="control-button control-button--convo control-button--previous-convo">
+            <span class="icon icon--control-button icon--previous-convo"></span>
+            <span class="control-button__text">Previous</span>
         </button>
+
         <div class="photo-convo__section photo-convo__interactive-buttons">
-            <button class="button button--photo-convo">Return to Gallery</button>
-        <button id="respond-button" class="button button--photo-convo" onClick="">Respond</button>
+            <a class="link--unstyled" href="/conversation/">
+                <button class="button button--photo-convo">Return to Gallery</button>
+            </a>
+            <button id="respond-button" class="button button--photo-convo" onClick="">Respond</button>
         </div>
 
-        <button class="photo-convo__nav photo-convo__nav--next photo-convo__nav--conversation">
-            Next
+        <button class="control-button control-button--convo control-button--next-convo">
+            <span class="control-button__text">Next</span>
+            <span class="icon icon--control-button icon--next icon--next-convo"></span>
         </button>
     </section>
     <section class="photo-convo__section photo-convo__form-container">
@@ -31,26 +38,42 @@
     <section class="photo-convo__section photo-convo__responses">
         {% include 'conversation/conversation_responses.html' with comments=photo.get_comments %}
     </section>
-    
+
 </main>
 {% endblock %}
 
 {% block footer %}
-    {% include 'base/footer.html' with footer_context='conversation' %}
+{% include 'base/footer.html' with footer_context='conversation' %}
 {% endblock %}
 
 {% block extra_js %}
-    <script>
-        let formButton = document.getElementById('respond-button');
-        
-        formButton.addEventListener('click', e => {
-            console.log('clicked');
+<script>
+    let formButton = document.getElementById('respond-button');
 
-            e.preventDefault();
+    formButton.addEventListener('click', e => {
+        console.log('clicked');
 
-            let form = document.querySelector(".photo-convo__form");
+        e.preventDefault();
 
-            form.classList.toggle('photo-convo__form--hidden');
-        })
-    </script>
+        let form = document.querySelector(".photo-convo__form");
+        let formButton = document.getElementById("respond-button");
+
+        form.classList.toggle('photo-convo__form--hidden');
+        formButton.classList.toggle('button--photo-convo-active');
+    })
+
+    let responseContainers = document.querySelectorAll(".photo-convo__response-container");
+    responseContainers.forEach(rc => {
+        let i = Math.random();
+        if (i > .5) rc.style.textAlign = 'right';
+        i = Math.random();
+        if (i > .5) rc.style.maxWidth = '45%';
+    })
+
+    let responses = document.querySelectorAll(".photo-convo__response");
+    responses.forEach(r => {
+        let fontSize = `${Math.floor(Math.random() * (64 - 24) ) + 24}px`;
+        r.style.fontSize = fontSize;
+    })
+</script>
 {% endblock %}

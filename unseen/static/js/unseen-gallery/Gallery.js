@@ -25,7 +25,7 @@ function Gallery(props) {
       })
       .catch((err) => setError(err))
       .finally(() => setLoaded(true));
-  });
+  }, []);
 
   const next = () => {
     if (currentIndex < length - show) {
@@ -42,14 +42,20 @@ function Gallery(props) {
   return (
     <div className="gallery__container">
       <div className="gallery__photos-wrapper">
-        <Photos currentIndex={currentIndex} photos={photos} show={show}/>
+        <Photos currentIndex={currentIndex} photos={photos} show={show} />
       </div>
       <section className="gallery__controls">
-        <button className="control-button control-button--gallery" onClick={prev}>
+        <button
+          className="control-button control-button--gallery"
+          onClick={prev}
+        >
           <span className="icon icon--control-button icon--previous-gallery" />
           <span className="control-button__text">Previous</span>
         </button>
-        <button className="control-button control-button--gallery" onClick={next}>
+        <button
+          className="control-button control-button--gallery"
+          onClick={next}
+        >
           <span className="control-button__text">Next</span>
           <span className="icon icon--control-button icon--next icon--next-gallery" />
         </button>

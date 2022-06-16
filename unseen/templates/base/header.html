@@ -15,10 +15,12 @@
                 About the Artist
             {% endif %}
         </h2>
+        {% if show_gallery_link %}
         <h2 class="nav__links {% if context == 'conversation'%}nav__links--conversation{% endif %}">
             <a href="/gallery/">
                 Back to Gallery
             </a>
         </h2>
+        {% endif %}
     {% endif %}
 </header>
