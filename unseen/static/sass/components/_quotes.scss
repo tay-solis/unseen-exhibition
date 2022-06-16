@@ -1,0 +1,51 @@
+.show {
+  opacity: 1;
+}
+
+.quotes {
+  @include black-bg;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $space-xl $space-xxl;
+
+  * {
+    transition: all 1000ms ease-in;
+  }
+
+  &__quote {
+    @include cr-light-italic;
+    margin-bottom: $space-md;
+  }
+
+  &__attribute {
+    width: 100%;
+    text-align: right;
+    margin-bottom: $space-md;
+  }
+  
+  &__text {
+    margin-bottom: $space-md;
+  }
+
+  &__continue {
+    width: 100%;
+    text-align: right;
+    margin-bottom: $space-md;
+  }
+
+  #quote,
+  #attribute,
+  #text,
+  #button {
+    opacity: 0;
+  }
+}

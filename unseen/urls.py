@@ -11,6 +11,6 @@ urlpatterns = [
     path('about/artist/', views.about_artist_view, name='about_artist'),
     path('about/show/', views.about_show_view, name='about_artist'),
     path('conversation/', views.conversation_home_view, name='conversation_home'),
+    path('welcome/', views.welcome_view, name='welcome'),
     path('gallery/', include('unseen.gallery.urls'))
-    # path('conversation/<slug:slugify_name>', views.conversation_photo_view, name='conversation_photo_view')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

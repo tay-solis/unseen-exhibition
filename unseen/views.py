@@ -13,6 +13,9 @@ def about_artist_view(request):
 def about_show_view(request):
     return render(request, "about/about_show.html")
 
+def welcome_view(request):
+    return render(request, "home/welcome.html")
+
 def conversation_home_view(request):
     return TemplateResponse(request, 'conversation/conversation_home.html', {'photos': Photo.objects.all()})
 

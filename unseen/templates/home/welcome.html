@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}unseen | Digital Photo Exhibition{% endblock %}
+
+{% block main %}
+<section class="quotes">
+  <div class="quote__content">
+    <div class="quote__quote-container">
+      <h1 id="quote" class="quotes__quote">
+        "I want to capture the kinds of moments that make an impact."
+      </h1>
+      <h2 id="attribute" class="quotes__attribute">
+        — Mia, <em>unseen</em> Mona Mansour
+      </h2>
+    </div>
+    <div id="text" class="quotes__text-container">
+      <p class="quotes__text">
+        In the creation of the character of Mia, playwright Mona Mansour was
+        inspired by the artistry of award winning documentary photographer
+        Nichole Sobecki. Focusing on regional issues related to identity,
+        conflict, and human rights, Sobecki's career has taken her to Turkey,
+        Lebanon, Syria, Afghanistan, and all over the African continent.
+      </p>
+      <p class="quotes__text">
+        Amidst our fractured present existence, she believes that a well-told
+        story can cut through the noise, deepen empathy, and inspire a more
+        conscious world.
+      </p>
+    </div>
+
+
+    <h3 id="button" class="quotes__continue">
+      <a href="/gallery/">Continue</a>
+    </h3>
+  </div>
+</section>
+{% endblock main%}
+
+{% block extra_js %}
+<script>
+  let opacity = 0;
+  let intervalID = 0;
+  let quote = document.getElementById("quote");
+  let attribute = document.getElementById("attribute");
+  let text = document.getElementById("text");
+  let button = document.getElementById("button");
+  window.onload = fadeIn;
+
+  function fadeIn() {
+    setInterval(() => show(quote), 500);
+    setInterval(() => show(attribute), 1500);
+    setInterval(() => show(text), 2500);
+    setInterval(() => show(button), 6000);
+  }
+
+  function show(obj) {
+    if (!obj.classList.contains("show")) {
+      obj.style.opacity = 1;
+    } else {
+      clearInterval(intervalID);
+    }
+  }
+</script>
+{% endblock %}
