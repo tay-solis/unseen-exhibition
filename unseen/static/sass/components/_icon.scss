@@ -35,6 +35,10 @@
     margin-top: -2px;
   }
 
+  &--previous-fs, &--next-fs {
+    background-color: $white;
+  }
+
 
   &--close-fs {
     @include close-icon;

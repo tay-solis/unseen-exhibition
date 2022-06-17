@@ -353,6 +353,8 @@ img {
     background: #000;
     margin-left: 4px;
     margin-top: -2px; }
+  .icon--previous-fs, .icon--next-fs {
+    background-color: #FFF; }
   .icon--close-fs {
     -webkit-mask-image: url("../images/icons/close.svg");
     mask-image: url("../images/icons/close.svg");

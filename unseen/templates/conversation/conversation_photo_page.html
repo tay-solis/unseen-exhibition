@@ -14,10 +14,13 @@
         <img src="{{photo.photo.url}}" class="photo-convo__image">
     </section>
     <section class="photo-convo__section photo-convo__button-container">
-        <button class="control-button control-button--convo control-button--previous-convo">
-            <span class="icon icon--control-button icon--previous-convo"></span>
-            <span class="control-button__text">Previous</span>
-        </button>
+        <a href="{{photo.get_previous_photo_convo_url}}">
+            <button class="control-button control-button--convo control-button--previous-convo">
+                <span class="icon icon--control-button icon--previous-convo"></span>
+                <span class="control-button__text">Previous</span>
+            </button>
+        </a>
+
 
         <div class="photo-convo__section photo-convo__interactive-buttons">
             <a class="link--unstyled" href="/conversation/">
@@ -26,10 +29,13 @@
             <button id="respond-button" class="button button--photo-convo" onClick="">Respond</button>
         </div>
 
-        <button class="control-button control-button--convo control-button--next-convo">
-            <span class="control-button__text">Next</span>
-            <span class="icon icon--control-button icon--next icon--next-convo"></span>
-        </button>
+        <a href="{{photo.get_previous_photo_convo_url}}">
+            <button class="control-button control-button--convo control-button--next-convo">
+                <span class="control-button__text">Next</span>
+                <span class="icon icon--control-button icon--next icon--next-convo"></span>
+            </button>
+        </a>
+
     </section>
     <section class="photo-convo__section photo-convo__form-container">
         {% include 'conversation/conversation_form.html' %}
@@ -72,7 +78,7 @@
 
     let responses = document.querySelectorAll(".photo-convo__response");
     responses.forEach(r => {
-        let fontSize = `${Math.floor(Math.random() * (64 - 24) ) + 24}px`;
+        let fontSize = `${Math.floor(Math.random() * (64 - 24)) + 24}px`;
         r.style.fontSize = fontSize;
     })
 </script>

@@ -14,6 +14,34 @@ class Photo(Orderable):
     photo = models.ImageField(blank=False)
     slug = AutoSlugField(populate_from='name')
 
+    def get_next_photo(self):
+        if Photo.objects.all().count() > 1:
+            if self.sort_order < Photo.objects.all().count() - 1:
+                return Photo.objects.get(sort_order=self.sort_order + 1)
+            else:
+                return Photo.objects.get(sort_order=0)
+        else:
+            return None
+
+    def get_previous_photo(self):
+        if Photo.objects.all().count() > 1: 
+            if self.sort_order - 1 > 0:
+                return Photo.objects.get(sort_order=self.sort_order - 1)
+            else:
+                return Photo.objects.get(sort_order=Photo.objects.all().count() - 1)
+    
+    def get_previous_photo_convo_url(self):
+        return self.get_previous_photo().get_conversation_url()
+
+    def get_next_photo_convo_url(self):
+        return self.get_next_photo().get_conversation_url()
+
+    def get_previous_photo_slug(self):
+        return self.get_previous_photo().slug
+
+    def get_next_photo_slug(self):
+        return self.get_next_photo().slug
+
     def response_num(self):
         return self.comments.all().count()
 

@@ -1,0 +1,90 @@
+<div className="fs-photo">
+  {!loaded && <p>loading...</p>
+  <section className="fs-photo__control-wrapper">
+    <a className="link--unstyled" href="/gallery/">
+      <button className="control-button control-button--fs control-button--close-fs">
+        <span className="icon icon--control-button icon--close-fs" />
+        <span className="control-button__text">Back</span>
+      </button>
+    </a>
+
+    <div className="fs-photo__controls">
+      <a
+        className="link--unstyled"
+        href="/gallery/{{photo.get_previous_photo_slug}}"
+      >
+        <button className="control-button control-button--fs control-button--previous-fs">
+          <span className="icon icon--control-button icon--previous-fs" />
+          <span className="control-button__text">Previous</span>
+        </button>
+      </a>
+      <a
+        className="link--unstyled"
+        href="gallery/{{photo.get_next_photo_slug}}"
+      >
+        <button className="control-button control-button--fs control-button--next-fs">
+          <span className="control-button__text">Next</span>
+          <span className="icon icon--control-button icon--next icon--next-fs" />
+        </button>
+      </a>
+    </div>
+  </section>
+  <div className="fs-photo__wrapper">
+    <img className="fs-photo__image" src="{{photo.photo}}" />
+    <div className="fs-photo__info-wrapper">
+      <a href="{{photo.get_conversation_slug}}">
+        <button className="button button--fs">View Responses</button>
+      </a>
+      <div className="fs-photo__info">
+        <h2 className="fs-photo__title">{photo.name</h2>
+          {% if photo.description %}
+          <p className="fs-photo__description">{photo.description</p>
+          {% endif %}
+      </div>
+    </div>
+  </div>
+</div><div className="fs-photo">
+  <section className="fs-photo__control-wrapper">
+    <a className="link--unstyled" href="/gallery/">
+      <button className="control-button control-button--fs control-button--close-fs">
+        <span className="icon icon--control-button icon--close-fs" />
+        <span className="control-button__text">Back</span>
+      </button>
+    </a>
+
+    <div className="fs-photo__controls">
+      <a
+        className="link--unstyled"
+        href="gallery/photo.previous_photo_slug"
+      >
+        <button className="control-button control-button--fs control-button--previous-fs">
+          <span className="icon icon--control-button icon--previous-fs" />
+          <span className="control-button__text">Previous</span>
+        </button>
+      </a>
+      <a
+        className="link--unstyled"
+        href="gallery/photo.next_photo_slug"
+      >
+        <button className="control-button control-button--fs control-button--next-fs">
+          <span className="control-button__text">Next</span>
+          <span className="icon icon--control-button icon--next icon--next-fs" />
+        </button>
+      </a>
+    </div>
+  </section>
+  <div className="fs-photo__wrapper">
+    <img className="fs-photo__image" src={`photo.photo` />
+    <div className="fs-photo__info-wrapper">
+      <a href="gallery/photo.slug/conversation">
+        <button className="button button--fs">View Responses</button>
+      </a>
+      <div className="fs-photo__info">
+        <h2 className="fs-photo__title">{photo.name</h2>
+        {photo.description && (
+          <p className="fs-photo__description">{photo.description</p>
+        )
+      </div>
+    </div>
+  </div>
+</div>

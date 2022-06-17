@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useParams } from "react-router-dom";
 
@@ -19,7 +19,7 @@ function FullScreenPhoto(props) {
       .then((response) => setPhoto(response.data))
       .catch((err) => setError(err))
       .finally(() => setLoaded(true));
-  }, []);
+  }, [slug]);
 
   return (
     <div className="fs-photo">
@@ -33,14 +33,24 @@ function FullScreenPhoto(props) {
         </Link>
 
         <div className="fs-photo__controls">
-          <button className="control-button control-button--fs control-button--previous-fs">
-            <span className="icon icon--control-button icon--previous-fs" />
-            <span className="control-button__text">Previous</span>
-          </button>
-          <button className="control-button control-button--fs control-button--next-fs">
-            <span className="control-button__text">Next</span>
-            <span className="icon icon--control-button icon--next icon--next-fs" />
-          </button>
+          <Link
+            className="link--unstyled"
+            to={`/gallery/${photo.previous_photo_slug}/`}
+          >
+            <button className="control-button control-button--fs control-button--previous-fs">
+              <span className="icon icon--control-button icon--previous-fs" />
+              <span className="control-button__text">Previous</span>
+            </button>
+          </Link>
+          <Link
+            className="link--unstyled"
+            to={`/gallery/${photo.next_photo_slug}/`}
+          >
+            <button className="control-button control-button--fs control-button--next-fs">
+              <span className="control-button__text">Next</span>
+              <span className="icon icon--control-button icon--next icon--next-fs" />
+            </button>
+          </Link>
         </div>
       </section>
       <div className="fs-photo__wrapper">
