@@ -1,5 +1,7 @@
 <article class="convo-item">
-    <img src="{{photo.photo.url}}" class="convo-item__image">
+    <a class="link--unstyled" href="{{photo.get_conversation_url}}">
+        <img src="{{photo.photo.url}}" class="convo-item__image">
+    </a>
     <div class="convo-item__info">
         <h3 class="convo-item__title">{{photo.name}}</h3>
         {% if photo.featured_response %}

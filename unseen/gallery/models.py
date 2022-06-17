@@ -3,9 +3,10 @@ from django.urls import reverse
 from django.forms import TextInput, Textarea, CheckboxInput, ModelForm
 
 from autoslug import AutoSlugField
+from orderable.models import Orderable
 
 
-class Photo(models.Model):
+class Photo(Orderable):
     name = models.CharField(max_length=256, unique=True)
     # image = models.ImageField(blank=False)
     description = models.CharField(max_length=256, blank=True)
@@ -27,6 +28,9 @@ class Photo(models.Model):
 
     def get_comments(self):
         return self.comments.all()
+        
+    def __unicode__(self):
+        return self.name
 
     def __str__(self):
         return self.name

@@ -466,7 +466,8 @@ img {
 
 .conversation {
   background-color: #000;
-  color: #FFF; }
+  color: #FFF;
+  padding-bottom: 16px; }
   .conversation a {
     color: #FFF;
     transition: all 200ms ease-in; }

@@ -1,5 +1,6 @@
 .conversation {
   @include black-bg;
+  padding-bottom: $space-ms;
 
   &__intro {
     text-align: center;
