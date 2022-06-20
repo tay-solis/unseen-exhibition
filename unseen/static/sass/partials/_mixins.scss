@@ -59,3 +59,16 @@
   mask-size: contain;
   -webkit-mask-size: contain;
 }
+
+@mixin force-landscape {
+  @media screen and (max-width: $mobile-lg) and (orientation: portrait) {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      height: 100vw;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+  }
+}

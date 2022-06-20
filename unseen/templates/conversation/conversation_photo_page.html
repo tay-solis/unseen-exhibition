@@ -21,15 +21,7 @@
             </button>
         </a>
 
-
-        <div class="photo-convo__section photo-convo__interactive-buttons">
-            <a class="link--unstyled" href="/conversation/">
-                <button class="button button--photo-convo">Return to Gallery</button>
-            </a>
-            <button id="respond-button" class="button button--photo-convo" onClick="">Respond</button>
-        </div>
-
-        <a href="{{photo.get_previous_photo_convo_url}}">
+        <a href="{{photo.get_next_photo_convo_url}}">
             <button class="control-button control-button--convo control-button--next-convo">
                 <span class="control-button__text">Next</span>
                 <span class="icon icon--control-button icon--next icon--next-convo"></span>
@@ -37,6 +29,14 @@
         </a>
 
     </section>
+
+    <section class="photo-convo__section photo-convo__interactive-buttons">
+        <a class="link--unstyled" href="/conversation/">
+            <button class="button button--photo-convo">Return to Gallery</button>
+        </a>
+        <button id="respond-button" class="button button--photo-convo" onClick="">Respond</button>
+    </section>
+
     <section class="photo-convo__section photo-convo__form-container">
         {% include 'conversation/conversation_form.html' %}
     </section>

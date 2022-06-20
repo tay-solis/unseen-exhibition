@@ -12,13 +12,14 @@
   font-size: $font-xs;
 
   &--about {
+    margin-top: $space-xs;
     margin-right: $space-md;
   }
 
   &--photo-convo {
     color: $black;
     background-color: $white;
-    margin-right: $space-md;
+    margin: 0 $space-ms;
   }
 
   &--photo-convo-active {
@@ -30,6 +31,10 @@
     position: absolute;
     bottom: $space-xl;
     right: $space-lg;
+
+    @media (max-width: $mobile-lg) {
+      right: $space-xl;
+    }
   }
 
   &:hover {
@@ -50,6 +55,11 @@
   color: $white;
   cursor: pointer;
 
+  @media (max-width: $mobile-lg) {
+    font-size: $font-sm;
+    line-height: 24px;
+  }
+
   &--gallery {
     color: $black;
   }
@@ -58,12 +68,14 @@
     padding: $space-sm $space-md;
   }
 
-  &--previous-convo, &--next-convo {
+  &--previous-convo,
+  &--next-convo {
     font-size: $font-sm;
     line-height: 32px;
   }
 
-  &--close-fs, &--previous-fs {
+  &--close-fs,
+  &--previous-fs {
     padding-right: $space-xl;
     background-image: -webkit-linear-gradient(
       to right,
@@ -96,4 +108,13 @@
       background-color: $osf-red;
     }
   }
+}
+
+.rotate-button {
+  background-color: unset;
+  border: unset;
+  padding: $space-xs;
+  position: absolute;
+  bottom: $space-xl;
+  right: $space-md;
 }

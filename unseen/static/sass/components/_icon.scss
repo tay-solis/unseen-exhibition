@@ -13,6 +13,11 @@
     mask-image: url("../images/icons/close.svg");
 }
 
+@mixin rotate-icon {
+  -webkit-mask-image: url("../images/icons/rotate.svg");
+    mask-image: url("../images/icons/rotate.svg");
+}
+
 .icon {
   @include icon;
   @include transition;
@@ -20,36 +25,45 @@
   display: inline-block;
   height: 36px;
   width: 36px;
+  background-color: $black;
 
   &--previous-gallery, &--previous-fs, &--previous-convo  {
     @include previous-icon;
-    background-color: $black;
     margin-right: $space-xs;
     margin-top: -2px;
   }
 
   &--next-gallery, &--next-fs, &--next-convo {
     @include next-icon;
-    background: $black;
     margin-left: $space-xs;
     margin-top: -2px;
   }
 
-  &--previous-fs, &--next-fs {
-    background-color: $white;
+  &--control-button {
+    @media (max-width: $mobile-lg){
+      height: 24px;
+      width: 24px;
+    }
   }
-
 
   &--close-fs {
     @include close-icon;
-    background: $white;
     margin-right: $space-xs;
     margin-top: -2px;
+  }
+
+  &--close-fs, &--next-fs, &--previous-fs {
+    background-color: $white;
   }
 
   &--next-convo, &--previous-convo {
     background-color: $white;
     height: 32px;
     width: 32px;
+  }
+
+  &--rotate {
+    @include rotate-icon;
+    background-color: $white;
   }
 }

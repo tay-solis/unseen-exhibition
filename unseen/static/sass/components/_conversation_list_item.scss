@@ -1,9 +1,17 @@
 .convo-item {
   max-width: 100%;
-  display: grid;
-  grid-template-columns: 400px auto;
-  grid-gap: $space-lg;
   margin-bottom: $space-xl;
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-gap: $space-lg;
+
+  @media (max-width: $mobile-xs) {
+    display: block;
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 400px auto;
+  }
 
   &__image {
     @include bw-image;
@@ -24,5 +32,11 @@
 
   &__name {
     @include cr-light-italic;
+  }
+
+  &__info {
+    @media (max-width: $mobile-xs) {
+      padding: $space-ms;
+    }
   }
 }

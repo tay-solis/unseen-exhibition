@@ -27,8 +27,12 @@
   }
 
   &__controls {
-    margin: $space-md $space-xl;
     display: flex;
     justify-content: space-between;
+    margin: $space-ms $space-md;
+
+    @media (min-width: $tablet) {
+      margin: $space-md $space-xl;
+    }
   }
 }

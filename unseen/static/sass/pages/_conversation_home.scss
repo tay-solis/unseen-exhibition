@@ -8,11 +8,23 @@
   }
 
   &__intro-text {
-    font-size: $font-md;
+    font-size: $font-s;
+    @media (min-width: $tablet) {
+      font-size: $font-md;
+    }
+    
   }
 
   &__list {
-    padding: 0 $space-xxl;
     margin: 0 auto;
+    padding: 0 $space-xl;
+
+    @media (max-width: $mobile-xs){
+      padding: 0;
+    }
+
+    @media (min-width: $tablet) {
+      padding: 0 $space-xxl;
+    }
   }
 }

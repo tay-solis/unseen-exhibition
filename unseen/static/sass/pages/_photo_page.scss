@@ -1,4 +1,8 @@
 .fs-photo {
+  &--rotated {
+    @include force-landscape;
+  }
+
   position: fixed;
   top: 0;
   bottom: 0;
@@ -11,6 +15,7 @@
     position: fixed;
     top: $space-lg;
     width: 100%;
+    z-index: 1;
   }
 
   &__controls {
@@ -20,11 +25,18 @@
 
   &__wrapper {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__image {
     max-height: 100vh;
     margin: 0 auto;
+    
+    @media (max-width: $mobile-lg){
+      max-height: 100%;
+    }
   }
 
   &__info-wrapper {

@@ -8,18 +8,34 @@ body {
 
 h1 {
   font-size: $font-xl;
+
+  @media (max-width: $mobile-lg){
+    font-size: $font-lg;
+  }
 }
 
 h2 {
   font-size: $font-lg;
+
+  @media (max-width: $mobile-lg){
+    font-size: $font-md;
+  }
 }
 
 h3 {
   font-size: $font-md;
+
+  @media (max-width: $mobile-lg){
+    font-size: $font-sm;
+  }
 }
 
 p {
   font-size: $font-sm;
+
+  @media (max-width: $mobile-lg){
+    font-size: $font-s;
+  }
 }
 
 em {
@@ -48,4 +64,39 @@ img {
   &--unstyled {
     text-decoration: none;
   }
+}
+
+.hidden {
+  display: none !important;
+
+  &--mobile {
+    @media(max-width: $mobile-lg){
+      display: none !important;
+    }
+  }
+
+  &--tablet {
+    @media(max-width: $tablet){
+      display: none !important;
+    }
+  }
+
+  &--md {
+    @media(min-width: $tablet){
+      display: none !important;
+    }
+  }
+
+  &--lg {
+    @media(min-width: $mobile-lg){
+      display: none !important;
+    }
+  }
+
+  &--desktop {
+    @media(min-width: $tablet){
+      display: none !important;
+    }
+  }
+  
 }

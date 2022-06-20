@@ -2,11 +2,18 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import Photos from "./components/Photos";
+import useWindowDimensions from "../utils/useWindowDimensions";
 
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 axios.defaults.xsrfCookieName = "csrftoken";
 
-const NUM_SHOW = 3;
+const NUM_SHOW_MOBILE = 1;
+const NUM_SHOW_TABLET = 2;
+const NUM_SHOW_DESKTOP = 3;
+
+const BP_MOBILE = 875;
+const BP_TABLET = 1080;
+
 
 function Gallery(props) {
   const [photos, setPhotos] = useState([]);
@@ -14,7 +21,16 @@ function Gallery(props) {
   const [loaded, setLoaded] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(photos.length);
-  const show = NUM_SHOW;
+  const { width } = useWindowDimensions();
+
+
+  let show = NUM_SHOW_DESKTOP;
+
+  if (width < BP_MOBILE ){
+    show = NUM_SHOW_MOBILE;
+  } else if (width < BP_TABLET && width >= BP_MOBILE) {
+    show = NUM_SHOW_TABLET;
+  }
 
   useEffect(() => {
     axios

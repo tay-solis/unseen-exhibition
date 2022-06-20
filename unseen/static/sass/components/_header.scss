@@ -6,6 +6,10 @@
 
   &__title {
     margin-bottom: $space-md;
+
+    @media (max-width: $mobile-lg){
+      font-size: $font-md;
+    }
   }
 
   &__title-name {

@@ -12,6 +12,7 @@ function FullScreenPhoto(props) {
   const [photo, setPhoto] = useState({});
   const [error, setError] = useState("");
   const [loaded, setLoaded] = useState(false);
+  const [rotated, setRotated] = useState(false);
 
   useEffect(() => {
     axios
@@ -21,8 +22,12 @@ function FullScreenPhoto(props) {
       .finally(() => setLoaded(true));
   }, [slug]);
 
+  const rotate = () => {
+    setRotated(!rotated);
+  };
+
   return (
-    <div className="fs-photo">
+    <div className={`fs-photo ${rotated ? "fs-photo--rotated" : ""}`}>
       {!loaded && <p>loading...</p>}
       <section className="fs-photo__control-wrapper">
         <Link className="link--unstyled" to={`/gallery/`}>
@@ -53,9 +58,24 @@ function FullScreenPhoto(props) {
           </Link>
         </div>
       </section>
-      <div className="fs-photo__wrapper">
-        <img className="fs-photo__image" src={`${photo.photo}`} />
+      <div
+        className={`fs-photo__wrapper ${
+          rotated ? "fs-photo__wrapper--rotated" : ""
+        }`}
+      >
+        <img
+          className={`fs-photo__image ${
+            rotated ? "fs-photo__image--rotated" : ""
+          }`}
+          src={`${photo.photo}`}
+        />
         <div className="fs-photo__info-wrapper">
+          <button
+            className="rotate-button hidden--lg"
+            onClick={rotate}
+          >
+            <span className="icon icon--control-button icon--rotate" />
+          </button>
           <a href={`/gallery/${photo.slug}/conversation/`}>
             <button className="button button--fs">View Responses</button>
           </a>
