@@ -55,11 +55,11 @@
 
   &__title {
     font-size: $font-s;
-    border-right: 1px solid $black;
     padding-right: $space-xs;
   }
 
   &__description {
+    border-left: 1px solid $black;
     padding-left: $space-xs;
     font-size: $font-xs;
   }

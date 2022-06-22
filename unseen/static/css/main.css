@@ -642,6 +642,9 @@ img {
     max-height: 650px;
     margin: 0 auto;
     overflow: hidden; }
+    @media (max-width: 650px) {
+      .photo-convo__form {
+        padding: 16px; } }
     .photo-convo__form--hidden {
       display: none;
       max-height: 0px; }
@@ -651,7 +654,9 @@ img {
     margin-bottom: 4px;
     min-height: 28px;
     border-radius: 3px;
-    border: 2px solid #555; }
+    border: 2px solid #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px; }
     .photo-convo__input:focus {
       border-color: #D31345; }
     .photo-convo__input--names {
@@ -686,11 +691,13 @@ img {
     padding: 8px 0; }
   .photo-convo__input-container {
     margin-bottom: 8px; }
-    .photo-convo__input-container#first_name_container, .photo-convo__input-container#last_name_container {
-      display: inline-block;
-      width: 48%; }
-    .photo-convo__input-container#first_name_container {
-      margin-right: 22px; }
+    @media (min-width: 650px) {
+      .photo-convo__input-container#first_name_container, .photo-convo__input-container#last_name_container {
+        display: inline-block;
+        width: 48%; } }
+    @media (min-width: 650px) {
+      .photo-convo__input-container#first_name_container {
+        margin-right: 22px; } }
     .photo-convo__input-container#consent_to_share_container {
       display: grid;
       grid-template-columns: 20px auto;
@@ -718,6 +725,8 @@ img {
         max-width: 100%;
         margin: 0;
         margin-bottom: 24px; } }
+  .about__barrier {
+    margin-bottom: 40px; }
   .about__text {
     margin: 40px 0; }
     .about__text:first-of-type {
@@ -801,8 +810,8 @@ img {
     padding: 16px 24px; }
   .fs-photo__title {
     font-size: 20px;
-    border-right: 1px solid #000;
     padding-right: 4px; }
   .fs-photo__description {
+    border-left: 1px solid #000;
     padding-left: 4px;
     font-size: 16px; }

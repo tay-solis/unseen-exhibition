@@ -33,7 +33,7 @@ function FullScreenPhoto(props) {
         <Link className="link--unstyled" to={`/gallery/`}>
           <button className="control-button control-button--fs control-button--close-fs">
             <span className="icon icon--control-button icon--close-fs" />
-            <span className="control-button__text">Back</span>
+            <span className="control-button__text">Back to Gallery</span>
           </button>
         </Link>
 

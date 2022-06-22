@@ -10,7 +10,6 @@ class Photo(Orderable):
     name = models.CharField(max_length=256, unique=True)
     # image = models.ImageField(blank=False)
     description = models.CharField(max_length=256, blank=True)
-    url = models.URLField(max_length=256, blank=True)
     photo = models.ImageField(blank=False)
     slug = AutoSlugField(populate_from='name')
 
@@ -46,7 +45,7 @@ class Photo(Orderable):
         return self.comments.all().count()
 
     def featured_response(self):
-        return self.comments.filter(featured=True).first()
+        return self.comments.filter(featured=True).last()
 
     def get_absolute_url(self):
         return reverse("conversation", args=[self.slug])
@@ -55,7 +54,7 @@ class Photo(Orderable):
         return '/gallery/{}/conversation/'.format(self.slug)
 
     def get_comments(self):
-        return self.comments.all()
+        return self.comments.all().order_by('-featured')
         
     def __unicode__(self):
         return self.name
@@ -107,7 +106,7 @@ class ResponseForm(ModelForm):
             'first_name': TextInput(attrs={'class': 'photo-convo__input  photo-convo__input--names'}),
             'last_name': TextInput(attrs={'class': 'photo-convo__input photo-convo__input--names'}),
             'email': TextInput(attrs={'class': 'photo-convo__input'}),
-            'response': Textarea(attrs={'rows':3, 'cols':20, 'class': 'photo-convo__input photo-convo__input--response'}),
+            'response': Textarea(attrs={'rows':2, 'cols':20, 'class': 'photo-convo__input photo-convo__input--response'}),
             'consent_to_share': CheckboxInput({'class': 'photo-convo__input photo-convo__input--consent'}),
         }
         help_texts = {

@@ -57,8 +57,6 @@
     let formButton = document.getElementById('respond-button');
 
     formButton.addEventListener('click', e => {
-        console.log('clicked');
-
         e.preventDefault();
 
         let form = document.querySelector(".photo-convo__form");
@@ -68,12 +66,16 @@
         formButton.classList.toggle('button--photo-convo-active');
     })
 
+    let width = window.innerWidth;
+
     let responseContainers = document.querySelectorAll(".photo-convo__response-container");
-    responseContainers.forEach(rc => {
-        let i = Math.random();
-        if (i > .5) rc.style.textAlign = 'right';
-        i = Math.random();
-        if (i > .5) rc.style.maxWidth = '45%';
+    responseContainers.forEach((rc, i) => {
+        let x = Math.random();
+        if (x > .5) rc.style.textAlign = 'right';
+        if (width > 650 && i != 0) {
+            x = Math.random();
+            if (x > .5) rc.style.maxWidth = '45%';
+        }
     })
 
     let responses = document.querySelectorAll(".photo-convo__response");
