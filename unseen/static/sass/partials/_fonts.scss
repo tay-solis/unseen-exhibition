@@ -1,41 +1,256 @@
+/* source-serif-pro-300italic - latin */
 @font-face {
-  font-family: "cormorant-garamond-regular";
-  src: url("../../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "cormorant-garamond-light";
-  src: url("../../fonts/Cormorant_Garamond/CormorantGaramond-Light.ttf");
-  font-weight: lighter;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "cormorant-garamond-light-italic";
-  src: url("../../fonts/Cormorant_Garamond/CormorantGaramond-LightItalic.ttf");
-  font-weight: lighter;
+  font-family: "Source Serif Pro";
   font-style: italic;
+  font-weight: 300;
+  src: url("../../fonts/source-serif-pro-v15-latin-300italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/source-serif-pro-v15-latin-300italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/source-serif-pro-v15-latin-300italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/source-serif-pro-v15-latin-300italic.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../../fonts/source-serif-pro-v15-latin-300italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/source-serif-pro-v15-latin-300italic.svg#SourceSerifPro")
+      format("svg"); /* Legacy iOS */
 }
 
+/* source-serif-pro-200italic - latin */
 @font-face {
-  font-family: "cormorant-garamond-bold";
-  src: url("../../fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf");
-  font-weight: bold;
+  font-family: "Source Serif Pro";
+  font-style: italic;
+  font-weight: 200;
+  src: url("../../fonts/source-serif-pro-v15-latin-200italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/source-serif-pro-v15-latin-200italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/source-serif-pro-v15-latin-200italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/source-serif-pro-v15-latin-200italic.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../../fonts/source-serif-pro-v15-latin-200italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/source-serif-pro-v15-latin-200italic.svg#SourceSerifPro")
+      format("svg"); /* Legacy iOS */
+}
+
+/* source-serif-pro-regular - latin */
+@font-face {
+  font-family: "Source Serif Pro";
   font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/source-serif-pro-v15-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/source-serif-pro-v15-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/source-serif-pro-v15-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/source-serif-pro-v15-latin-regular.woff") format("woff"),
+    /* Modern Browsers */
+      url("../../fonts/source-serif-pro-v15-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/source-serif-pro-v15-latin-regular.svg#SourceSerifPro")
+      format("svg"); /* Legacy iOS */
 }
 
+/* source-serif-pro-italic - latin */
 @font-face {
-  font-family: "cormorant-garamond-italic";
-  src: url("../../fonts/Cormorant_Garamond/CormorantGaramond-Italic.ttf");
-  font-weight: normal;
+  font-family: "Source Serif Pro";
   font-style: italic;
+  font-weight: 400;
+  src: url("../../fonts/source-serif-pro-v15-latin-italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/source-serif-pro-v15-latin-italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/source-serif-pro-v15-latin-italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/source-serif-pro-v15-latin-italic.woff") format("woff"),
+    /* Modern Browsers */
+      url("../../fonts/source-serif-pro-v15-latin-italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/source-serif-pro-v15-latin-italic.svg#SourceSerifPro")
+      format("svg"); /* Legacy iOS */
 }
 
+/* source-serif-pro-600 - latin */
 @font-face {
-  font-family: "cormorant-garamond-bold-italic";
-  src: url("../../fonts/Cormorant_Garamond/CormorantGaramond-BoldItalic.ttf");
-  font-weight: bold;
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/source-serif-pro-v15-latin-600.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/source-serif-pro-v15-latin-600.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/source-serif-pro-v15-latin-600.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/source-serif-pro-v15-latin-600.woff") format("woff"),
+    /* Modern Browsers */ url("../../fonts/source-serif-pro-v15-latin-600.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/source-serif-pro-v15-latin-600.svg#SourceSerifPro")
+      format("svg"); /* Legacy iOS */
+}
+
+/* source-serif-pro-600italic - latin */
+@font-face {
+  font-family: "Source Serif Pro";
   font-style: italic;
+  font-weight: 600;
+  src: url("../../fonts/source-serif-pro-v15-latin-600italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/source-serif-pro-v15-latin-600italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/source-serif-pro-v15-latin-600italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/source-serif-pro-v15-latin-600italic.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../../fonts/source-serif-pro-v15-latin-600italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/source-serif-pro-v15-latin-600italic.svg#SourceSerifPro")
+      format("svg"); /* Legacy iOS */
+}
+
+/* cormorant-garamond-300 - latin */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../fonts/cormorant-garamond-v15-latin-300.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/cormorant-garamond-v15-latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/cormorant-garamond-v15-latin-300.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-300.woff") format("woff"),
+    /* Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-300.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/cormorant-garamond-v15-latin-300.svg#CormorantGaramond")
+      format("svg"); /* Legacy iOS */
+}
+
+/* cormorant-garamond-300italic - latin */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../../fonts/cormorant-garamond-v15-latin-300italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/cormorant-garamond-v15-latin-300italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("../../fonts/cormorant-garamond-v15-latin-300italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-300italic.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-300italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/cormorant-garamond-v15-latin-300italic.svg#CormorantGaramond")
+      format("svg"); /* Legacy iOS */
+}
+
+/* cormorant-garamond-regular - latin */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/cormorant-garamond-v15-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/cormorant-garamond-v15-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/cormorant-garamond-v15-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/cormorant-garamond-v15-latin-regular.svg#CormorantGaramond")
+      format("svg"); /* Legacy iOS */
+}
+
+/* cormorant-garamond-italic - latin */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../../fonts/cormorant-garamond-v15-latin-italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/cormorant-garamond-v15-latin-italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/cormorant-garamond-v15-latin-italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-italic.woff") format("woff"),
+    /* Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/cormorant-garamond-v15-latin-italic.svg#CormorantGaramond")
+      format("svg"); /* Legacy iOS */
+}
+
+/* cormorant-garamond-600 - latin */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/cormorant-garamond-v15-latin-600.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/cormorant-garamond-v15-latin-600.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/cormorant-garamond-v15-latin-600.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-600.woff") format("woff"),
+    /* Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-600.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/cormorant-garamond-v15-latin-600.svg#CormorantGaramond")
+      format("svg"); /* Legacy iOS */
+}
+
+/* cormorant-garamond-600italic - latin */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../../fonts/cormorant-garamond-v15-latin-600italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/cormorant-garamond-v15-latin-600italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("../../fonts/cormorant-garamond-v15-latin-600italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-600italic.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../../fonts/cormorant-garamond-v15-latin-600italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/cormorant-garamond-v15-latin-600italic.svg#CormorantGaramond")
+      format("svg"); /* Legacy iOS */
 }

@@ -1,25 +1,52 @@
+// Fonts
 @mixin cr-regular {
-  font-family: "cormorant-garamond-regular", serif;
+  font-family: "Cormorandt Garamond", Garamond, serif;
 }
 
 @mixin cr-light {
-  font-family: "cormorant-garamond-light", serif;
+  font-family: "Cormorandt Garamond", Garamond, serif;
   font-weight: lighter;
 }
 
 @mixin cr-light-italic {
-  font-family: "cormorant-garamond-light-italic", serif;
+  font-family: "Cormorandt Garamond", Garamond, serif;
   font-weight: lighter;
   font-style: italic;
 }
 
 @mixin cr-bold {
-  font-family: "cormorant-garamond-bold", serif;
+  font-family: "Cormorandt Garamond", Garamond, serif;
   font-weight: bold;
 }
 
 @mixin cr-bold-italic {
-  font-family: "cormorant-garamond-bold-italic", serif;
+  font-family: "Cormorandt Garamond", Garamond, serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@mixin ssp-regular {
+  font-family: "Source Serif Pro", Garamond, serif;
+}
+
+@mixin ssp-light {
+  font-family: "Source Serif Pro", Garamond, serif;
+  font-weight: lighter;
+}
+
+@mixin ssp-light-italic {
+  font-family: "Source Serif Pro", Garamond, serif;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+@mixin ssp-bold {
+  font-family: "Source Serif Pro", Garamond, serif;
+  font-weight: bold;
+}
+
+@mixin ssp-bold-italic {
+  font-family: "Source Serif Pro", Garamond, serif;
   font-weight: bold;
   font-style: italic;
 }

@@ -1,4 +1,5 @@
 const path = require("path");
+var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   module: {
@@ -8,17 +9,42 @@ module.exports = {
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
+      // fonts
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
         use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
-        ],
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "fonts/",
+              publicPath: "../../webpack_bundles/fonts/"
+            }
+          }
+        ]
       },
+      // sass
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+        ]
+      },
+      // css
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              importLoaders: 1
+            }
+          }
+        ]
+      }
     ],
   },
   entry: {
