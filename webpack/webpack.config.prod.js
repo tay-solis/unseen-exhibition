@@ -1,12 +1,8 @@
 const { merge } = require("webpack-merge");
+
 const base = require("./webpack.config.base.js");
 
 module.exports = merge(base, {
-  mode: "development",
-
-  devtool: "inline-source-map",
-
-  devServer: {
-    static: "./dist",
-  },
+  mode: "production",
+  devtool: 'source-map',
 });
