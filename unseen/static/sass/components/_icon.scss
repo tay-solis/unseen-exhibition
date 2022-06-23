@@ -18,6 +18,27 @@
     mask-image: url("../images/icons/rotate.svg");
 }
 
+@mixin facebook-icon {
+  -webkit-mask-image: url("../images/icons/facebook.svg");
+    mask-image: url("../images/icons/facebook.svg");
+}
+
+@mixin linkedin-icon {
+  -webkit-mask-image: url("../images/icons/linkedin.svg");
+    mask-image: url("../images/icons/linkedin.svg");
+}
+
+@mixin envelope-icon {
+  -webkit-mask-image: url("../images/icons/envelope.svg");
+    mask-image: url("../images/icons/envelope.svg");
+}
+
+@mixin twitter-icon {
+  -webkit-mask-image: url("../images/icons/twitter.svg");
+    mask-image: url("../images/icons/twitter.svg");
+}
+
+
 .icon {
   @include icon;
   @include transition;
@@ -66,4 +87,29 @@
     @include rotate-icon;
     background-color: $white;
   }
+
+  &--social {
+    background-color: $white;
+    margin-left: $space-sm;
+  }
+
+  &--facebook {
+    @include facebook-icon;
+  }
+
+  &--twitter {
+    @include twitter-icon;
+  }
+
+  &--envelope {
+    @include envelope-icon;
+  }
+
+  &--linkedin {
+    @include linkedin-icon;
+  }
+}
+
+.IN-widget {
+  display: none !important;
 }

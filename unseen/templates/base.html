@@ -2,23 +2,29 @@
 
 <!doctype html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <title>{% block title %}{% endblock %}</title>
-        <link rel="icon" href="{% static 'images/favicon.png' %}">
 
-        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
 
-    {% block header %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="unseen is a digital photo exhibition presented by the Oregon Shakespeare Festival in conversation with the West Coast premiere of Mona Mansaur's unseen.">
 
-    <body>
-        {% block main %}{% endblock %}
-    </body>
+    {% block social_meta %}{% endblock %}
+</head>
 
-    {% block footer %}{% endblock %}
+{% block header %}{% endblock %}
 
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-    {% block extra_js %}{% endblock %}
+<body>
+    {% block main %}{% endblock %}
+</body>
+
+{% block footer %}{% endblock %}
+
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+{% block extra_js %}{% endblock %}
+
 </html>

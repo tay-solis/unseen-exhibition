@@ -2,10 +2,14 @@
 {% load static %}
 
 {% block title %}unseen | Digital Photo Exhibition{% endblock %}
+{% block social_meta %}
+{% include 'utils/social_meta.html' with title="unseen | Digital Photo Exhibition" %}
+{% endblock %}
 
 {% block main %}
 <main class="home">
-    <section class="home__photo hidden--mobile" style="background-image: url('{% static 'images/Nichole_Sobecki.jpg' %}')"></section>
+    <section class="home__photo hidden--mobile"
+        style="background-image: url('{% static 'images/Nichole_Sobecki.jpg' %}')"></section>
     <section class="home__info home__info--desktop">
         <div class="home__title-container">
             <h1 class="home__title"><em>unseen</em></h1>
@@ -20,16 +24,14 @@
                 presented by
                 <span class="hidden--lg">the Oregon Shakespeare Festival</span>
             </p>
-            
+
             <img class="home__logo hidden--mobile" src="{% static 'images/logos/OSF_logo_Reg_white.png' %}"
                 alt="Oregon Shakespeare Festival" />
-            <p class="home__presented-by-text">in conversation with the West Coast Premiere of Mona Mansour's <em>unseen</em></p>
+            <p class="home__presented-by-text">in conversation with the West Coast Premiere of Mona Mansour's
+                <em>unseen</em></p>
         </div>
-        <section class="home__photo home__photo--mobile hidden--lg" style="background-image: url('{% static 'images/Nichole_Sobecki.jpg' %}')"></section>
-
-
-        <!-- <img class="home__photo home__photo--mobile hidden--lg" src="{% static 'images/Nichole_Sobecki.jpg' %}"
-                alt="Portrait of the artist, Nichole Sobecki" /> -->
+        <section class="home__photo home__photo--mobile hidden--lg"
+            style="background-image: url('{% static 'images/Nichole_Sobecki.jpg' %}')"></section>
 
         <div class="home__enter">
             <p class="home__enter-text">

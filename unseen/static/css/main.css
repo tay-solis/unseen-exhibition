@@ -560,6 +560,24 @@ img {
     -webkit-mask-image: url("../images/icons/rotate.svg");
     mask-image: url("../images/icons/rotate.svg");
     background-color: #FFF; }
+  .icon--social {
+    background-color: #FFF;
+    margin-left: 8px; }
+  .icon--facebook {
+    -webkit-mask-image: url("../images/icons/facebook.svg");
+    mask-image: url("../images/icons/facebook.svg"); }
+  .icon--twitter {
+    -webkit-mask-image: url("../images/icons/twitter.svg");
+    mask-image: url("../images/icons/twitter.svg"); }
+  .icon--envelope {
+    -webkit-mask-image: url("../images/icons/envelope.svg");
+    mask-image: url("../images/icons/envelope.svg"); }
+  .icon--linkedin {
+    -webkit-mask-image: url("../images/icons/linkedin.svg");
+    mask-image: url("../images/icons/linkedin.svg"); }
+
+.IN-widget {
+  display: none !important; }
 
 .show {
   opacity: 1; }
@@ -827,6 +845,9 @@ img {
   .photo-convo__form-button {
     display: block;
     margin: 0 auto; }
+  .photo-convo__social-buttons {
+    display: flex;
+    justify-content: flex-end; }
 
 .about {
   padding: 16px 24px; }

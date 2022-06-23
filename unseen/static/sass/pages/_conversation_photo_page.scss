@@ -142,4 +142,9 @@
     display: block;
     margin: 0 auto;
   }
+
+  &__social-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

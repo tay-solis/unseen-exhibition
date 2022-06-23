@@ -1,0 +1,38 @@
+{% load static %}
+
+{% comment %}
+Twitter summary card - see https://dev.twitter.com/cards/types/summary
+and https://dev.twitter.com/cards/getting-started
+{% endcomment %}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ title }}" />
+{% if description %}
+<meta name="twitter:description" content="{{ description }}" />
+{% else %}
+<meta name="twitter:description"
+  content="unseen is a digital photo exhibition presented by the Oregon Shakespeare Festival in conversation with the West Coast premiere of Mona Mansaur's unseen.">
+{% endif %}
+
+{% if social_image %}
+<meta name="twitter:image" content="{{ social_image }}">
+{% else %}
+<meta name="twitter:image" content="{% static 'images/default_social_image.png' %}">
+{% endif %}
+
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://unseenphotogallery.osfashland.org/" />
+<meta property="og:title" content="{{ title }}" />
+{% if social_image %}
+<meta property="og:image" content="{{ social_image }}">
+{% else %}
+<meta property="og:image" content="{% static 'images/default_social_image.png' %}" />
+{% endif %}
+
+{% if description%}
+<meta property="og:description" content="{{ description }}" />
+{% else %}
+<meta property="og:description"
+  content="unseen is a digital photo exhibition presented by the Oregon Shakespeare Festival in conversation with the West Coast premiere of Mona Mansaur's unseen.">
+{% endif %}
+<meta property="og:site_name" content="unseen | Digital Photo Exhibition" />

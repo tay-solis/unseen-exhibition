@@ -2,6 +2,9 @@
 
 {% load static %}
 {% block title %}Conversation | unseen{% endblock%}
+{% block social_meta %}
+{% include 'utils/social_meta.html' with title="unseen | Conversation" %}
+{% endblock %}
 
 {% block header %}
     {% include 'base/header.html' with header_text='Conversation' link_context='conversation' show_nav=True show_gallery_link=False %}

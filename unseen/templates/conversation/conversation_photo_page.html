@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 
 {% load static %}
+{% load social_share %}
 
 {% block title %}{{photo.name}} | Conversation{% endblock %}
+{% block social_meta %}
+{% include 'utils/social_meta.html' with title=photo.name social_image=photo.photo.url %}
+{% endblock %}
 
 {% block header %}
 {% include 'base/header.html' with header_text='Conversation' link_context='conversation' show_nav=True show_gallery_link=False %}
@@ -10,6 +14,12 @@
 
 {% block main %}
 <main class="photo-convo">
+    <section class="photo-convo__section photo-convo__social-buttons">
+        {% post_to_facebook object_or_url '<span class="icon icon--social icon--facebook"></span>' %}
+        {% post_to_linkedin object_or_url 'icon icon--social icon--linkedin' %}
+        {% post_to_twitter "{{photo.name}}" object_or_url '<span class="icon icon--social icon--twitter"></span>' %}
+        {% send_email object.title "{{photo.name}}" object_or_url '<span class="icon icon--social icon--envelope"></span>' %}
+    </section>
     <section class="photo-convo__section photo-convo__image-container">
         <img src="{{photo.photo.url}}" class="photo-convo__image">
     </section>
@@ -36,6 +46,7 @@
         </a>
         <button id="respond-button" class="button button--photo-convo" onClick="">Respond</button>
     </section>
+
 
     <section class="photo-convo__section photo-convo__form-container">
         {% include 'conversation/conversation_form.html' %}
