@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'us-west2-docker.pkg.dev/unseenphotogallery/docker-unseen/unseen-exhibition-web', '.' ]
+images:
+- 'us-west2-docker.pkg.dev/unseenphotogallery/docker-unseen/unseen-exhibition-web'
