@@ -41,9 +41,17 @@ steps:
         "2",
         "--no-input",
       ]
+  - id: "npm install"
+    name: node
+    entrypoint: npm
+    args: ['install']
+  - id: "frontend build"
+    name: node
+    entrypoint: npm
+    args: ['run', 'build']
 
 substitutions:
-  _INSTANCE_NAME: unseen-postgres
+  _INSTANCE_NAME: unseen
   _REGION: us-west1
   _SERVICE_NAME: unseenphotogallery
   _SECRET_SETTINGS_NAME: django_settings

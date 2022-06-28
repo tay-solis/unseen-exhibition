@@ -20,14 +20,16 @@ class Photo(Orderable):
             else:
                 return Photo.objects.get(sort_order=0)
         else:
-            return None
+            return self
 
     def get_previous_photo(self):
         if Photo.objects.all().count() > 1: 
-            if self.sort_order - 1 > 0:
+            if self.sort_order - 1 >= 0:
                 return Photo.objects.get(sort_order=self.sort_order - 1)
             else:
                 return Photo.objects.get(sort_order=Photo.objects.all().count() - 1)
+        else:
+            return self
     
     def get_previous_photo_convo_url(self):
         return self.get_previous_photo().get_conversation_url()

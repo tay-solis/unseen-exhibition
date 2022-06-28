@@ -577,7 +577,8 @@ img {
     mask-image: url("../images/icons/linkedin.svg"); }
 
 .IN-widget {
-  display: none !important; }
+  opacity: 0;
+  min-height: 100%; }
 
 .show {
   opacity: 1; }
