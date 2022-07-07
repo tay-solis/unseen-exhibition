@@ -8,9 +8,13 @@ from orderable.models import Orderable
 
 class Photo(Orderable):
     name = models.CharField(max_length=256, unique=True)
-    # image = models.ImageField(blank=False)
     description = models.CharField(max_length=256, blank=True)
     photo = models.ImageField(blank=False)
+    social_image = models.ImageField(
+        blank=True,
+        null=True,
+        help_text='Optional. Social media requires an image size of 8MB or less.'
+    )
     slug = AutoSlugField(populate_from='name')
 
     def get_next_photo(self):

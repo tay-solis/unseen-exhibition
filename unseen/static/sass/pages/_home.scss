@@ -71,6 +71,7 @@
   &__enter-link {
     text-align: right;
     padding-right: $space-xl;
+    padding-top: $space-md;
     @media (max-width: $mobile-lg) {
       padding: $space-ms;
     }

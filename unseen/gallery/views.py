@@ -9,19 +9,19 @@ from rest_framework import status
 from .models import Photo, ResponseForm
 from .serializers import PhotoSerializer
 
-# Create your views here.
+HASHTAGS = "#unseenOSF #OSF2022"
 
 
 class PhotoListView(ListView):
     model = Photo
     template_name = "gallery/gallery.html"
 
+
 class PhotoView(ListView):
     model = Photo
     template_name = "gallery/gallery.html"
 
 
-# Create your views here.
 class PhotoConversationView(DetailView):
     model = Photo
     slug_field = 'slug'
@@ -39,6 +39,7 @@ class PhotoConversationView(DetailView):
         context['photo'] = photo
         context['comments'] = comments
         context['form'] = form
+        context['hashtags'] = HASHTAGS
         return context
 
     def post(self, request, *args, **kwargs):
@@ -47,7 +48,7 @@ class PhotoConversationView(DetailView):
         self.object = self.get_object()
         context = super().get_context_data(**kwargs)
 
-        photo= Photo.objects.filter(slug=self.kwargs['slug'])[0]
+        photo = Photo.objects.filter(slug=self.kwargs['slug'])[0]
         comments = photo.comments.all()
 
         context['photo'] = photo

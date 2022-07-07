@@ -6,7 +6,12 @@ const Photo = (props) => {
   return (
     <article className="g-photo">
       <Link to={`/gallery/${photo.slug}/`}>
+        {photo.social_image ? 
+        <img className="g-photo__image" src={`${photo.social_image}`} />
+        :
         <img className="g-photo__image" src={`${photo.photo}`} />
+        }
+        
       </Link>
 
       <div className="g-photo__info">

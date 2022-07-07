@@ -23,11 +23,6 @@
     mask-image: url("../images/icons/facebook.svg");
 }
 
-@mixin linkedin-icon {
-  -webkit-mask-image: url("../images/icons/linkedin.svg");
-    mask-image: url("../images/icons/linkedin.svg");
-}
-
 @mixin envelope-icon {
   -webkit-mask-image: url("../images/icons/envelope.svg");
     mask-image: url("../images/icons/envelope.svg");
@@ -103,10 +98,6 @@
 
   &--envelope {
     @include envelope-icon;
-  }
-
-  &--linkedin {
-    @include linkedin-icon;
   }
 }
 

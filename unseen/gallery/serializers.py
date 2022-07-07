@@ -8,6 +8,7 @@ class PhotoSerializer(serializers.ModelSerializer):
     description = serializers.CharField(max_length=256)
     slug = serializers.CharField(max_length=256)
     photo = serializers.ImageField()
+    social_image = serializers.ImageField()
     conversation_url = serializers.SerializerMethodField()
     previous_photo_slug = serializers.SerializerMethodField()
     next_photo_slug = serializers.SerializerMethodField()
@@ -23,5 +24,5 @@ class PhotoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Photo
-        fields = ('name', 'description', 'slug', 'photo',
+        fields = ('name', 'description', 'slug', 'photo', 'social_image',
                   'conversation_url', 'previous_photo_slug', 'next_photo_slug')

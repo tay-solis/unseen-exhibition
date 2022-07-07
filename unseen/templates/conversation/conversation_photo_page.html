@@ -5,7 +5,11 @@
 
 {% block title %}{{photo.name}} | Conversation{% endblock %}
 {% block social_meta %}
-{% include 'utils/social_meta.html' with title=photo.name social_image=photo.photo.url %}
+{% if photo.social_image %}
+    {% include 'utils/social_meta.html' with title=photo.name social_image=photo.social_image.url %}
+{% else %}
+    {% include 'utils/social_meta.html' with title=photo.name social_image=photo.photo.url %}
+{% endif %}
 {% endblock %}
 
 {% block header %}
@@ -14,11 +18,13 @@
 
 {% block main %}
 <main class="photo-convo">
+    <section class="conversation__intro">
+        <h2 class="conversation__intro-text">When we choose to look, what do we have to say?</h2>
+    </section>
     <section class="photo-convo__section photo-convo__social-buttons">
         {% post_to_facebook object_or_url '<span class="icon icon--social icon--facebook"></span>' %}
-        {% post_to_linkedin object_or_url 'icon icon--social icon--linkedin' %}
-        {% post_to_twitter "{{photo.name}}" object_or_url '<span class="icon icon--social icon--twitter"></span>' %}
-        {% send_email object.title "{{photo.name}}" object_or_url '<span class="icon icon--social icon--envelope"></span>' %}
+        {% post_to_twitter "{{photo.name}} {{hashtags}}" object_or_url '<span class="icon icon--social icon--twitter"></span>' %}
+        {% send_email object.title "{{photo.name}} {{hashtags}}" object_or_url '<span class="icon icon--social icon--envelope"></span>' %}
     </section>
     <section class="photo-convo__section photo-convo__image-container">
         <img src="{{photo.photo.url}}" class="photo-convo__image">
@@ -42,7 +48,7 @@
 
     <section class="photo-convo__section photo-convo__interactive-buttons">
         <a class="link--unstyled" href="/conversation/">
-            <button class="button button--photo-convo">Return to Gallery</button>
+            <button class="button button--photo-convo">Return to Conversation</button>
         </a>
         <button id="respond-button" class="button button--photo-convo" onClick="">Respond</button>
     </section>

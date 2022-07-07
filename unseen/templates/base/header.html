@@ -1,5 +1,10 @@
 <header class="header {% if link_context == 'conversation'%}header--conversation{% endif %}">
-    <h1 class="header__title"><span class="header__title-name">unseen</span> | {{header_text}}</h1>
+    <h1 class="header__title">
+        <a href="/" class="link--unstyled">
+            <span class="header__title-name">unseen</span>
+        </a>
+         | {{header_text}}
+    </h1>
     {% if show_nav %}
     <nav class="nav">
         <h2 class="nav__links {% if link_context == 'conversation'%}nav__links--conversation{% endif %}">

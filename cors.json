@@ -1,0 +1,17 @@
+[
+  {
+      "maxAgeSeconds": 3600,
+      "method": [
+          "GET",
+          "HEAD",
+          "DELETE"
+      ],
+      "origin": [
+          "https://unseenphotogallery-2asyhtu2ba-wl.a.run.app/",
+          "https://unseenphotogallery-2asyhtu2ba-uw.a.run.app/"
+      ],
+      "responseHeader": [
+          "Content-Type"
+      ]
+  }
+]

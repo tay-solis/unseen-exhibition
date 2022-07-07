@@ -16,7 +16,10 @@
   &__image {
     @include bw-image;
     width: 100%;
-    max-width: 400px;
+
+    @media (min-width: $tablet) {
+      max-width: 400px;
+    }
   }
 
   &__title {

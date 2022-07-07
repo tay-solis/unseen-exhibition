@@ -28,7 +28,6 @@ function FullScreenPhoto(props) {
 
   return (
     <div className={`fs-photo ${rotated ? "fs-photo--rotated" : ""}`}>
-      {!loaded && <p>loading...</p>}
       <section className="fs-photo__control-wrapper">
         <Link className="link--unstyled" to={`/gallery/`}>
           <button className="control-button control-button--fs control-button--close-fs">
@@ -58,35 +57,36 @@ function FullScreenPhoto(props) {
           </Link>
         </div>
       </section>
-      <div
-        className={`fs-photo__wrapper ${
-          rotated ? "fs-photo__wrapper--rotated" : ""
-        }`}
-      >
-        <img
-          className={`fs-photo__image ${
-            rotated ? "fs-photo__image--rotated" : ""
+      {!loaded ? (
+        <h1 className="fs-photo__loading">loading...</h1>
+      ) : (
+        <div
+          className={`fs-photo__wrapper ${
+            rotated ? "fs-photo__wrapper--rotated" : ""
           }`}
-          src={`${photo.photo}`}
-        />
-        <div className="fs-photo__info-wrapper">
-          <button
-            className="rotate-button hidden--lg"
-            onClick={rotate}
-          >
-            <span className="icon icon--control-button icon--rotate" />
-          </button>
-          <a href={`/gallery/${photo.slug}/conversation/`}>
-            <button className="button button--fs">View Responses</button>
-          </a>
-          <div className="fs-photo__info">
-            <h2 className="fs-photo__title">{photo.name}</h2>
-            {photo.description && (
-              <p className="fs-photo__description">{photo.description}</p>
-            )}
+        >
+          <img
+            className={`fs-photo__image ${
+              rotated ? "fs-photo__image--rotated" : ""
+            }`}
+            src={`${photo.photo}`}
+          />
+          <div className="fs-photo__info-wrapper">
+            <button className="rotate-button hidden--lg" onClick={rotate}>
+              <span className="icon icon--control-button icon--rotate" />
+            </button>
+            <a href={`/gallery/${photo.slug}/conversation/`}>
+              <button className="button button--fs">View Responses</button>
+            </a>
+            <div className="fs-photo__info">
+              <h2 className="fs-photo__title">{photo.name}</h2>
+              {photo.description && (
+                <p className="fs-photo__description">{photo.description}</p>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

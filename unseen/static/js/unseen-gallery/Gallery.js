@@ -14,7 +14,6 @@ const NUM_SHOW_DESKTOP = 3;
 const BP_MOBILE = 875;
 const BP_TABLET = 1080;
 
-
 function Gallery(props) {
   const [photos, setPhotos] = useState([]);
   const [error, setError] = useState("");
@@ -23,10 +22,9 @@ function Gallery(props) {
   const [length, setLength] = useState(photos.length);
   const { width } = useWindowDimensions();
 
-
   let show = NUM_SHOW_DESKTOP;
 
-  if (width < BP_MOBILE ){
+  if (width < BP_MOBILE) {
     show = NUM_SHOW_MOBILE;
   } else if (width < BP_TABLET && width >= BP_MOBILE) {
     show = NUM_SHOW_TABLET;
@@ -58,9 +56,12 @@ function Gallery(props) {
   return (
     <div className="gallery__container">
       {!loaded ? (
-        "loading..."
+        <h2 className="gallery__intro-text">Loading...</h2>
       ) : (
         <div>
+          <h2 className="gallery__intro-text">
+            When we choose to look, what do we have to say?
+          </h2>
           <div className="gallery__photos-wrapper">
             <Photos currentIndex={currentIndex} photos={photos} show={show} />
           </div>
@@ -84,7 +85,7 @@ function Gallery(props) {
           <section className="gallery__continue">
             <a href="/conversation/">
               <button className="button gallery__continue-button">
-                Continue
+                Continue to Conversation
               </button>
             </a>
           </section>

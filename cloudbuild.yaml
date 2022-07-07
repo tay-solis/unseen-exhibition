@@ -3,6 +3,9 @@ steps:
   args: [ 'build', '-t', 'us-west2-docker.pkg.dev/unseenphotogallery/docker-unseen/unseen-exhibition-web', '.' ]
 - name: node
   entrypoint: npm
+  args: ['install']
+- name: node
+  entrypoint: npm
   args: ['run', 'build']
 
 images:

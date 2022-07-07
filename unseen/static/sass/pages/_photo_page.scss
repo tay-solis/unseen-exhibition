@@ -11,6 +11,10 @@
   display: flex;
   justify-content: center;
 
+  &__loading {
+    color: $white;
+  }
+
   &__control-wrapper {
     position: fixed;
     top: $space-lg;
@@ -28,6 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 250px;
   }
 
   &__image {

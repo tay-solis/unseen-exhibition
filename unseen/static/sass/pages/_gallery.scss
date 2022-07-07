@@ -20,6 +20,16 @@
     width: 100%;
   }
 
+  &__intro-text {
+    font-size: $font-s;
+    text-align: center;
+    margin-bottom: $space-ms;
+
+    @media (min-width: $tablet) {
+      font-size: $font-md;
+    }
+  }
+
 
   &__continue {
     display: flex;

@@ -1,5 +1,7 @@
 {% load static %}
 
+{% load custom_tags %}
+
 {% comment %}
 Twitter summary card - see https://dev.twitter.com/cards/types/summary
 and https://dev.twitter.com/cards/getting-started
@@ -10,13 +12,18 @@ and https://dev.twitter.com/cards/getting-started
 <meta name="twitter:description" content="{{ description }}" />
 {% else %}
 <meta name="twitter:description"
-  content="unseen is a digital photo exhibition presented by the Oregon Shakespeare Festival in conversation with the West Coast premiere of Mona Mansaur's unseen.">
+  content="Immerse yourself in the haunting images of award-winning photographer \
+    Nichole Sobecki, and share your responses with fellow audience members. unseen \
+    follows Mia, an American conflict photographer. Sobecki's artistry was an \
+    inspiration to playwright Mona Mansour as she imagined the character of Mia. \
+    Sobecki was generously involved as a resource thoughtout the play's development \
+    and has been a great advocate of the project. View Sobecki's work and learn more here.">
 {% endif %}
 
 {% if social_image %}
-<meta name="twitter:image" content="{{ social_image }}">
+<meta name="twitter:image" content="{{ social_image|unsecure_url }}">
 {% else %}
-<meta name="twitter:image" content="{% static 'images/default_social_image.png' %}">
+<meta name="twitter:image" content="{% static 'images/default_social_image.jpg' %}">
 {% endif %}
 
 
@@ -24,15 +31,21 @@ and https://dev.twitter.com/cards/getting-started
 <meta property="og:url" content="https://unseenphotogallery.osfashland.org/" />
 <meta property="og:title" content="{{ title }}" />
 {% if social_image %}
-<meta property="og:image" content="{{ social_image }}">
+<meta property="og:image" content="{{ social_image|unsecure_url }}">
+<meta property="og:image:secure" content="{{ social_image }}">
 {% else %}
-<meta property="og:image" content="{% static 'images/default_social_image.png' %}" />
+<meta property="og:image" content="{% static 'images/default_social_image.jpg' %}" />
 {% endif %}
 
 {% if description%}
 <meta property="og:description" content="{{ description }}" />
 {% else %}
 <meta property="og:description"
-  content="unseen is a digital photo exhibition presented by the Oregon Shakespeare Festival in conversation with the West Coast premiere of Mona Mansaur's unseen.">
+  content="Immerse yourself in the haunting images of award-winning photographer \
+    Nichole Sobecki, and share your responses with fellow audience members. unseen \
+    follows Mia, an American conflict photographer. Sobecki's artistry was an \
+    inspiration to playwright Mona Mansour as she imagined the character of Mia. \
+    Sobecki was generously involved as a resource thoughtout the play's development \
+    and has been a great advocate of the project. View Sobecki's work and learn more here.">
 {% endif %}
-<meta property="og:site_name" content="unseen | Digital Photo Exhibition" />
+<meta property="og:site_name" content="unseen | Interactive Photo Exhibition" />
